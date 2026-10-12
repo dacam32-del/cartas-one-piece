@@ -1241,7 +1241,8 @@
       "fecha_alta": "2026-10-11",
       "precio_referencia": 1590,
       "precio_venta_clp": 1590,
-      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)",
+      "precio_usd_fijo": true
     },
     {
       "id": 42,
@@ -2111,7 +2112,8 @@
       "fecha_alta": "2026-10-11",
       "precio_referencia": 190,
       "precio_venta_clp": 240,
-      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)",
+      "precio_usd_fijo": true
     },
     {
       "id": 71,
@@ -2141,7 +2143,8 @@
       "fecha_alta": "2026-10-11",
       "precio_referencia": 140,
       "precio_venta_clp": 190,
-      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)",
+      "precio_usd_fijo": true
     },
     {
       "id": 72,
@@ -2171,7 +2174,8 @@
       "fecha_alta": "2026-10-11",
       "precio_referencia": 170,
       "precio_venta_clp": 220,
-      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)",
+      "precio_usd_fijo": true
     },
     {
       "id": 73,
@@ -3999,7 +4003,8 @@
       "notas": "Precio: TCGplayer market vía optcgapi.com (11-oct-2026) × dólar $979,01 (11-oct-2026). Mismo código que la de OP-09; David tiene cartas del ST-25, así que se toma la reimpresión del ST-25 (US$0,05, el precio más bajo). En la foto no se distingue cuál es.",
       "imagen": "img/OP09-055.webp",
       "fecha_alta": "2026-10-11",
-      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)",
+      "precio_usd_fijo": true
     },
     {
       "id": 133,
@@ -4309,7 +4314,8 @@
       "notas": "Precio: TCGplayer market vía optcgapi.com (11-oct-2026) × dólar $979,01 (11-oct-2026). Impresión CONFIRMADA con foto de cerca: reimpresión normal de PRB-01 Premium Booster -The Best- (US$0,32). Bloque ②, sin 'NOT FOR SALE' en el borde (la promo del Sealed Battle Kit Vol. 1 lo trae), borde blanco mate sin textura foil (no es Jolly Roger Foil); los destellos son parte del arte. Diseño normal, no Full Art.",
       "imagen": "img/P-053.webp",
       "fecha_alta": "2026-10-11",
-      "fuente_imagen": "foto de cerca de David (recorte con corrección de perspectiva y mejora)"
+      "fuente_imagen": "foto de cerca de David (recorte con corrección de perspectiva y mejora)",
+      "precio_usd_fijo": true
     },
     {
       "id": 143,
@@ -4321,7 +4327,7 @@
       "tipo": "Character",
       "rareza": "P",
       "alt_art": false,
-      "set": "P One Piece Promotion Cards",
+      "set": "ST-25 Starter Deck 25: BLUE Buggy (reimpresión de la promo)",
       "costo": 7,
       "poder": 8000,
       "counter": 0,
@@ -4332,15 +4338,16 @@
       "cantidad": 3,
       "estado": "LP",
       "idioma": "Inglés",
-      "precio_mercado_usd": 0.5,
+      "precio_mercado_usd": 0.56,
       "dolar_clp": 979.01,
-      "precio_referencia": 490,
-      "precio_venta_clp": 540,
+      "precio_referencia": 550,
+      "precio_venta_clp": 550,
       "precio_manual": false,
-      "notas": "Precio: TCGplayer market vía optcgapi.com (11-oct-2026) × dólar $979,01 (11-oct-2026). Versión normal de la promo de lanzamiento OP-10 (no la SP de US$167).",
+      "notas": "Precio: TCGplayer market (10-oct-2026, vía tickermint/TCGplayer) × dólar $979,01. Impresión CONFIRMADA con foto de cerca: reimpresión de la promo en el Starter Deck 25 BLUE Buggy (US$0,56). El arte a carta completa con texto encima es el diseño normal de esta promo (igual a la imagen oficial). Bloque ③, borde con '©EO/S ©E.O./S., T.A. BANDAI MADE IN JAPAN EN' y SIN 'NOT FOR SALE' (la del evento de lanzamiento OP-10 se regalaba), sin sello WINNER ni foil (la Winner vale ~US$68) y no es la SP dorada de OP-17 (~US$167). Las 3 copias tienen el mismo borde e impresión (comparadas en las fotos de grilla).",
       "imagen": "img/P-084.webp",
       "fecha_alta": "2026-10-11",
-      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
+      "fuente_imagen": "foto de cerca de David (recorte con corrección de perspectiva y mejora)",
+      "precio_usd_fijo": true
     },
     {
       "id": 144,
@@ -4371,7 +4378,8 @@
       "notas": "Precio: TCGplayer market vía optcgapi.com (11-oct-2026) × dólar $979,01 (11-oct-2026). Ícono de bloque ② = impresión del Starter Deck 16 (US$0,32), no la del ST-11.",
       "imagen": "img/ST11-004.webp",
       "fecha_alta": "2026-10-11",
-      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)",
+      "precio_usd_fijo": true
     },
     {
       "id": 145,

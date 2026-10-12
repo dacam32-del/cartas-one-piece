@@ -47,6 +47,6 @@ También se puede editar `cartas.json` a mano. Campos de cada carta:
   - Si no hay foto, se usa la imagen oficial como último recurso, queda marcada `imagen_marca_agua: true` y se puede arreglar después con `python3 agregar_carta.py --recortar-fotos fotos/*.jpg`.
   - Fotos propias sueltas: `--imagen img/archivo.webp`.
 - **Precio de referencia CLP** = precio de mercado USD × dólar del día ([open.er-api.com](https://open.er-api.com), respaldo [mindicador.cl](https://mindicador.cl)), redondeado a $10 → `precio_referencia`.
-- **Precio de venta (el que se muestra y suma el total)** → `precio_venta_clp`: si la referencia es menor a $500 se le suman $50, y nunca baja de $100 (ej. 40→100, 70→120, 450→500, 1590→1590). Un `--precio` manual manda. `--aplicar-regla` la reaplica sin internet.
+- **Precio de venta (el que se muestra y suma el total)** → `precio_venta_clp`: si la referencia es menor a $500 se le suman $50, y nunca baja de $100 (ej. 40→100, 70→120, 450→500, 1590→1590). Un `--precio` manual manda. `--aplicar-regla` la reaplica sin internet. Las cartas con `precio_usd_fijo: true` (reimpresiones de starter deck, promos con impresión confirmada) guardan su precio USD y `--actualizar-precios` no lo reemplaza por el de otra versión.
 
 One Piece Card Game © Eiichiro Oda / Shueisha, Toei Animation, Bandai. Sitio de colección personal, sin afiliación oficial.

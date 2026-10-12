@@ -228,6 +228,8 @@ def main():
     if a.actualizar_precios:
         d = cargar(); dol = a.dolar or dolar() or d.get("dolar_clp"); d["dolar_clp"] = dol
         for c in d["cartas"]:
+            if c.get("precio_usd_fijo"):   # impresión especial (reimpresión de starter deck, etc.): la API daría otra versión
+                fijar_precios(c, c.get("precio_mercado_usd"), dol); print(f"  {c['codigo']} {c['nombre']}: impresión fija US${c.get('precio_mercado_usd')} → venta ${c.get('precio_venta_clp')}"); continue
             r = api_card(c["codigo"], c.get("alt_art"))
             if r and r.get("market_price") is not None:
                 fijar_precios(c, r["market_price"], dol)
