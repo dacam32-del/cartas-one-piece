@@ -1,0 +1,91 @@
+{
+  "dueno": "DEMO — cartas de ejemplo, NO son parte de la colección",
+  "coleccion": "Vista de ejemplo",
+  "actualizado": "2026-10-11",
+  "dolar_clp": 979,
+  "fuente_precios": "optcgapi.com (TCGplayer, USD) — valores de ejemplo",
+  "demo": true,
+  "cartas": [
+    {
+      "id": 1,
+      "codigo": "OP01-001",
+      "nombre": "Roronoa Zoro",
+      "color": [
+        "Rojo"
+      ],
+      "tipo": "Leader",
+      "rareza": "L",
+      "alt_art": false,
+      "set": "OP-01 Romance Dawn",
+      "costo": null,
+      "poder": 5000,
+      "counter": null,
+      "vida": 5,
+      "atributo": "Slash",
+      "subtipos": "Straw Hat Crew / Supernovas",
+      "texto": "[DON!! x1] [Your Turn] All of your Characters gain +1000 power.",
+      "cantidad": 1,
+      "estado": "NM",
+      "idioma": "Inglés",
+      "precio_mercado_usd": 1.72,
+      "precio_ref_clp": 1680,
+      "notas": "EJEMPLO de demostración",
+      "imagen": "img/demo/OP01-001.webp",
+      "fecha_alta": "2026-10-11"
+    },
+    {
+      "id": 2,
+      "codigo": "ST01-001",
+      "nombre": "Monkey.D.Luffy",
+      "color": [
+        "Rojo"
+      ],
+      "tipo": "Leader",
+      "rareza": "L",
+      "alt_art": false,
+      "set": "ST-01 Straw Hat Crew",
+      "costo": null,
+      "poder": 5000,
+      "counter": null,
+      "vida": 5,
+      "atributo": "Strike",
+      "subtipos": "Straw Hat Crew / Supernovas",
+      "texto": "[Activate: Main] [Once Per Turn] Give this Leader or 1 of your Characters up to 1 rested DON!! card.",
+      "cantidad": 2,
+      "estado": "LP",
+      "idioma": "Inglés",
+      "precio_mercado_usd": 30.81,
+      "precio_ref_clp": 30160,
+      "notas": "EJEMPLO de demostración",
+      "imagen": "img/demo/ST01-001.webp",
+      "fecha_alta": "2026-10-10"
+    },
+    {
+      "id": 3,
+      "codigo": "OP01-016",
+      "nombre": "Nami",
+      "color": [
+        "Rojo"
+      ],
+      "tipo": "Character",
+      "rareza": "R",
+      "alt_art": false,
+      "set": "OP-01 Romance Dawn",
+      "costo": 1,
+      "poder": 2000,
+      "counter": 1000,
+      "vida": null,
+      "atributo": "Special",
+      "subtipos": "Straw Hat Crew",
+      "texto": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 \"Straw Hat Crew\" type Character card other than [Nami] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "cantidad": 3,
+      "estado": "NM",
+      "idioma": "Inglés",
+      "precio_mercado_usd": 5.08,
+      "precio_ref_clp": 4970,
+      "notas": "EJEMPLO de demostración",
+      "imagen": "img/demo/OP01-016.webp",
+      "fecha_alta": "2026-10-09"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b1424">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☠️</text></svg>">
+<title>Cartas One Piece — Colección de David Eduardo</title>
+<meta name="description" content="Catálogo de cartas One Piece Card Game de David Eduardo. Precios de referencia en pesos chilenos.">
+<meta property="og:title" content="Cartas One Piece Card Game">
+<meta property="og:description" content="Catálogo de cartas One Piece Card Game, precios de referencia en CLP.">
+<link rel="stylesheet" href="style.css?v=20261011a">
+</head>
+<body>
+<div class="demo-banner" id="demoBanner" hidden>🧪 MODO DEMO — estas cartas son solo ejemplos y no forman parte de la colección. <a href="./">Ver colección real</a></div>
+<header>
+  <div class="logo"><span class="skull" aria-hidden="true">☠</span> Cartas One Piece <span class="skull" aria-hidden="true">☠</span></div>
+  <div class="sub" id="sub">One Piece Card Game</div>
+  <div class="stats">
+    <div class="stat"><b id="stTotal">0</b><span>Cartas</span></div>
+    <div class="stat"><b id="stDist">0</b><span>Distintas</span></div>
+    <div class="stat"><b id="stValor">$0</b><span>Valor ref. CLP</span></div>
+  </div>
+</header>
+<div class="bar">
+  <div class="row">
+    <label class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input id="q" type="search" placeholder="Buscar por nombre, código (OP01-001), subtipo…" autocomplete="off"></label>
+    <select id="sort" aria-label="Ordenar">
+      <option value="recientes">Más recientes</option>
+      <option value="codigo">Código</option>
+      <option value="precio_desc">Precio ↓</option>
+      <option value="precio_asc">Precio ↑</option>
+      <option value="nombre">Nombre A–Z</option>
+      <option value="costo">Costo</option>
+      <option value="poder">Poder</option>
+    </select>
+  </div>
+  <div class="filters" id="filters"></div>
+  <div class="meta-row"><span id="count"></span><button class="clear" id="clear">Limpiar filtros</button></div>
+</div>
+<main>
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty">No hay cartas con esos filtros.</div>
+  <div class="vacio" id="vacio" hidden>
+    <div class="ship" aria-hidden="true">⛵</div>
+    <h2>¡La bodega del barco está vacía… por ahora!</h2>
+    <p>Todavía no hay cartas registradas en la colección.<br>Apenas se agreguen, aparecerán aquí con su imagen, rareza, set y precio de referencia en CLP.</p>
+    <a class="sf" href="?demo=1">Ver cómo se verá (demo) →</a>
+  </div>
+</main>
+<footer id="foot"></footer>
+
+<div id="modal" role="dialog" aria-modal="true">
+  <div class="mtop"><button class="ib" id="close" aria-label="Cerrar">✕</button><span id="pos">1 / 1</span><span style="width:42px"></span></div>
+  <div class="stage"><div class="det" id="det"></div></div>
+  <div class="nav"><button id="prev">‹ Anterior</button><span class="hint">desliza ⇆</span><button id="next">Siguiente ›</button></div>
+</div>
+<script src="app.js?v=20261011a"></script>
+</body>
+</html>

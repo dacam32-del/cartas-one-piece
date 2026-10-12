@@ -1,0 +1,9 @@
+{
+  "dueno": "David Eduardo",
+  "coleccion": "Cartas One Piece Card Game",
+  "actualizado": "2026-10-11",
+  "dolar_clp": null,
+  "fuente_precios": "optcgapi.com (TCGplayer, USD) convertido a CLP",
+  "reglas_precio": "Precio referencia CLP = precio de mercado TCGplayer en USD × dólar del día, redondeado a $10. Se puede fijar a mano con --precio.",
+  "cartas": []
+}
