@@ -7003,15 +7003,16 @@
       "cantidad": 2,
       "estado": "LP",
       "idioma": "Inglés",
-      "precio_mercado_usd": 0.51,
+      "precio_mercado_usd": 0.1021,
       "dolar_clp": 979.01,
-      "precio_referencia": 500,
-      "precio_venta_clp": 500,
+      "precio_referencia": 100,
+      "precio_venta_clp": 150,
       "precio_manual": false,
-      "notas": "",
+      "notas": " Precio fijado por David: venta $150 CLP (referencia $100 + regla); el US$0,51 del ST-19 en TCGplayer se consideró inflado.",
       "imagen": "img/ST19-002.webp",
       "fecha_alta": "2026-10-12",
-      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)",
+      "precio_usd_fijo": true
     },
     {
       "id": 229,
