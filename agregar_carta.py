@@ -108,7 +108,7 @@ def agregar(a):
         "nombre": a.nombre or limpiar_nombre(r.get("card_name")),
         "color": colores,
         "tipo": a.tipo or r.get("card_type") or "",
-        "rareza": a.rareza or r.get("rarity") or "",
+        "rareza": a.rareza or {"PR": "P"}.get(r.get("rarity"), r.get("rarity")) or "",
         "alt_art": a.alt,
         "set": a.set or (f"{r.get('set_id','')} {r.get('set_name','')}".strip()),
         "costo": a.costo if a.costo is not None else num(r.get("card_cost")),
