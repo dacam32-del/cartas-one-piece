@@ -44,7 +44,9 @@ def api_card(code, alt=False):
         print("  aviso: optcgapi.com no respondió:", e); return None
     if not isinstance(rows, list) or not rows: return None
     alts = [r for r in rows if "parallel" in r.get("card_name", "").lower() or "alternate" in r.get("card_name", "").lower()]
-    base = [r for r in rows if r not in alts]
+    # versión normal: sin sufijos como (Reprint), (Jolly Roger Foil), (Full Art); se permite el número "(033)"
+    base = [r for r in rows if r not in alts and not re.search(r"\((?!\d{3}\))[^)]*\)", r.get("card_name", ""))] \
+        or [r for r in rows if r not in alts]
     if alt and not alts: print("  aviso: optcgapi.com no tiene versión Parallel/Alt Art de esta carta; uso los datos de la normal (revisa el precio, o fíjalo con --precio).")
     pool = (alts if alt else base) or rows
     return pool[0]
