@@ -24,7 +24,7 @@ let cards = [], DATA = {}, list = [], cur = 0;
 const groups = [
   {key:"color",label:"Color",get:c=>colores(c).length>1?[...colores(c),"Multicolor"]:colores(c),order:COLOR_ORDER},
   {key:"tipo",label:"Tipo",get:c=>[c.tipo||"—"],order:TYPE_ORDER,fmt:v=>TYPE_ES[v]||v},
-  {key:"rareza",label:"Rareza",get:c=>c.alt_art?[c.rareza||"—","Alt Art"]:[c.rareza||"—"],order:RAR_ORDER},
+  {key:"rareza",label:"Rareza",get:c=>[...(c.rareza?[c.rareza]:[]),...(c.alt_art?["Alt Art"]:[])],order:RAR_ORDER},
   {key:"set",label:"Set",get:c=>[c.set||"—"],order:null},
   {key:"estado",label:"Estado",get:c=>[c.estado||"—"],order:["NM","LP","MP","HP","DMG"]},
 ];
@@ -63,24 +63,24 @@ function filtered(){
 }
 function img(c, cls){ return c.imagen ? `<img src="${esc(c.imagen)}" alt="${esc(c.nombre)}" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=&quot;noimg&quot;>Sin imagen</div>'">` : `<div class="noimg">Sin imagen</div>`; }
 function tile(c, idx){
-  const dots = colores(c).map(k=>`<span class="dot" style="background:${COLOR_VAR[k]||"#888"}"></span>`).join("");
-  return `<button class="tile" data-idx="${idx}" style="--acc:${accentSolid(c)}">
-    <div class="ph">${img(c)}<div class="badges">${dots}</div>
-      <span class="rb" style="--rc:${RAR_COL[c.rareza]||"#bbb"}">${esc(c.rareza||"—")}</span>${c.alt_art?'<span class="altb">ALT ART</span>':""}</div>
-    <div class="in"><h3>${esc(c.nombre)}</h3><div class="s">${esc(c.codigo)} · ${esc(TYPE_ES[c.tipo]||c.tipo||"")}${c.costo!=null?" · Costo "+esc(c.costo):""}</div>
-      <div class="pr"><span class="price">${clp(c.precio_ref_clp)}</span><span class="stock">x${qty(c)}</span></div></div></button>`;
+  const q = qty(c);
+  return `<button class="tile" data-idx="${idx}" aria-label="${esc(c.nombre)}">${img(c)}
+    ${c.precio_ref_clp!=null?`<span class="ptag">${clp(c.precio_ref_clp)}</span>`:""}${q>1?`<span class="qbadge">x${q}</span>`:""}${c.alt_art?'<span class="altb">ALT</span>':""}</button>`;
 }
 function render(){
   list = filtered();
   const vacio = cards.length === 0;
   document.getElementById("vacio").hidden = !vacio;
-  document.querySelector(".bar").hidden = vacio;
+  document.querySelector(".top .row").hidden = vacio;
   document.getElementById("grid").innerHTML = list.map(tile).join("");
   document.getElementById("empty").style.display = (!vacio && !list.length) ? "block" : "none";
   const any = state.q || Object.values(state.sel).some(s=>s.size);
   const n = list.reduce((a,c)=>a+qty(c),0);
-  document.getElementById("count").textContent = `${list.length} ${list.length===1?"resultado":"resultados"}${any?` de ${cards.length}`:""} · ${n} ${n===1?"carta":"cartas"}`;
-  document.getElementById("clear").classList.toggle("show", !!any);
+  const nf = Object.values(state.sel).reduce((a,s)=>a+s.size,0);
+  document.getElementById("count").textContent = `${n} ${n===1?"carta":"cartas"}`;
+  document.getElementById("fstate").hidden = !any;
+  const fc = document.getElementById("fcount"); fc.hidden = !nf; fc.textContent = nf;
+  document.getElementById("apply").textContent = `Ver ${n} ${n===1?"carta":"cartas"}`;
 }
 function detail(dx){
   const c = list[cur]; if(!c) return;
@@ -130,6 +130,12 @@ document.addEventListener("keydown", e => { if(!document.getElementById("modal")
     if(Math.abs(dx)>50 && Math.abs(dx)>Math.abs(dy)*1.3) go(dx<0?1:-1); x0=null; }, {passive:true}); })();
 document.getElementById("q").addEventListener("input", e => { state.q=e.target.value; render(); });
 document.getElementById("sort").addEventListener("change", e => { state.sort=e.target.value; render(); });
+function openF(o){ const dr=document.getElementById("drawer"); dr.classList.toggle("open",o); dr.setAttribute("aria-hidden",!o);
+  document.getElementById("scrim").hidden=!o; document.getElementById("fbtn").setAttribute("aria-expanded",o); document.body.style.overflow=o?"hidden":""; }
+document.getElementById("fbtn").onclick = () => openF(true);
+document.getElementById("fclose").onclick = document.getElementById("scrim").onclick = document.getElementById("apply").onclick = () => openF(false);
+document.addEventListener("keydown", e => { if(e.key==="Escape" && document.getElementById("drawer").classList.contains("open")) openF(false); });
+document.getElementById("clear2").onclick = () => document.getElementById("clear").click();
 document.getElementById("clear").onclick = () => { state.q=""; document.getElementById("q").value=""; Object.values(state.sel).forEach(s=>s.clear());
   document.querySelectorAll(".chip.on").forEach(b=>b.classList.remove("on")); render(); };
 
@@ -138,10 +144,8 @@ fetch(SRC + "?t=" + Date.now()).then(r => { if(!r.ok) throw new Error(r.status);
   cards = (d.cartas||[]).map((c,i) => ({...c, id:c.id??i+1,
     _search: norm([c.codigo,c.nombre,c.nombre_en,c.tipo,TYPE_ES[c.tipo],c.set,c.rareza,RAR_NAME[c.rareza],colores(c).join(" "),c.subtipos,c.atributo,c.texto,c.notas].join(" "))}));
   document.getElementById("demoBanner").hidden = !DEMO;
-  document.getElementById("stTotal").textContent = cards.reduce((a,c)=>a+qty(c),0);
-  document.getElementById("stDist").textContent = cards.length;
-  document.getElementById("stValor").textContent = clp(cards.reduce((a,c)=>a+(c.precio_ref_clp||0)*qty(c),0));
-  document.getElementById("sub").textContent = `One Piece Card Game${d.dueno?" · "+d.dueno:""}`;
+  const tq = cards.reduce((a,c)=>a+qty(c),0);
+  document.getElementById("tot").textContent = tq ? `${tq} cartas · ${clp(cards.reduce((a,c)=>a+(c.precio_ref_clp||0)*qty(c),0))}` : "";
   document.getElementById("foot").innerHTML = `Precios de referencia: ${esc(d.fuente_precios||"—")}${d.dolar_clp?` · Dólar $${esc(String(d.dolar_clp).replace(".",","))} CLP`:""}<br>Actualizado ${esc(d.actualizado||"—")} · El valor real depende del estado de cada carta.<br>One Piece Card Game © Eiichiro Oda / Shueisha, Toei Animation, Bandai. Sitio de colección personal, sin afiliación oficial.`;
   buildFilters(); render();
   const m = location.hash.match(/^#carta-(\d+)$/); if(m){ const i=list.findIndex(c=>String(c.id)===m[1]); if(i>=0) openAt(i); }

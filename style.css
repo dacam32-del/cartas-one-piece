@@ -96,3 +96,44 @@ dt{color:var(--mut)}dd{color:var(--txt)}
   .det{grid-template-columns:minmax(300px,400px) 1fr;align-items:start;padding-top:20px}
   .bigimg img,.bigimg .noimg{width:100%}
 }
+
+/* ===== v2: diseño "cartas primero" ===== */
+.top{position:sticky;top:0;z-index:6;background:rgba(9,16,30,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:8px 12px 8px;padding-top:max(8px,env(safe-area-inset-top));text-align:left}
+.brand{max-width:1280px;margin:0 auto 7px;display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.top .logo{font-size:18px;font-weight:900;letter-spacing:.3px}
+.tot{font-size:12px;color:var(--mut);white-space:nowrap}
+.top .row{max-width:1280px}
+.search input{padding:9px 12px 9px 34px;font-size:15px}
+.fbtn{position:relative;display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:0 14px;font-size:14px;font-weight:600;cursor:pointer;color:var(--txt)}
+.fbtn:active{transform:scale(.97)}
+.fcount{background:var(--gold);color:#1a1408;font-size:11px;font-weight:800;border-radius:999px;min-width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;padding:0 5px}
+.fstate{max-width:1280px;margin:6px auto 0;display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:var(--mut)}
+.fstate .clear{visibility:visible}
+.scrim{position:fixed;inset:0;z-index:15;background:rgba(0,0,0,.55)}
+.drawer{position:fixed;left:0;right:0;bottom:0;z-index:16;max-height:78vh;display:flex;flex-direction:column;background:#0f1a2e;border-top:1px solid var(--line);border-radius:18px 18px 0 0;box-shadow:0 -12px 40px rgba(0,0,0,.6);transform:translateY(105%);transition:transform .25s ease;visibility:hidden}
+.drawer.open{transform:none;visibility:visible}
+.dhead{display:flex;justify-content:space-between;align-items:center;padding:12px 16px 6px}
+.dhead b{font-size:16px}
+.ib.sm{width:34px;height:34px;font-size:15px}
+.dbody{overflow-y:auto;padding:4px 16px 10px;overscroll-behavior:contain}
+.drawer .fgroup{flex-wrap:wrap;overflow:visible;-webkit-mask-image:none;mask-image:none;padding:8px 0;border-bottom:1px solid var(--line);gap:7px}
+.drawer .flabel{width:100%;min-width:0;margin-bottom:2px}
+.drawer select{max-width:none;width:100%}
+.dfoot{display:flex;gap:10px;padding:10px 16px;padding-bottom:max(12px,env(safe-area-inset-bottom));border-top:1px solid var(--line)}
+.clear2{flex:0 0 auto;background:none;border:1px solid var(--line);border-radius:12px;padding:11px 16px;color:var(--mut);cursor:pointer}
+.apply{flex:1;border:none;border-radius:12px;padding:11px;font-weight:800;font-size:15px;background:linear-gradient(90deg,var(--gold),var(--gold2));color:#1a1408;cursor:pointer}
+main{max-width:1280px;padding:10px 8px 10px}
+.grid{grid-template-columns:repeat(2,1fr);gap:8px}
+.tile{position:relative;display:block;border:none;border-radius:10px;background:none;padding:0;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.45)}
+.tile:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.6)}
+.tile img,.tile .noimg{border-radius:10px;width:100%;aspect-ratio:600/838}
+.ptag{position:absolute;left:6px;bottom:6px;background:rgba(5,10,20,.82);color:var(--green);font-size:12px;font-weight:800;padding:3px 7px;border-radius:999px;border:1px solid rgba(126,226,168,.3)}
+.qbadge{position:absolute;right:6px;bottom:6px;background:var(--gold);color:#1a1408;font-size:12px;font-weight:900;padding:3px 7px;border-radius:999px}
+.tile .altb{top:6px;right:6px;bottom:auto}
+footer{font-size:11px;padding:16px 16px 26px}
+@media(min-width:600px){ .grid{grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px} }
+@media(min-width:760px){
+  .top .logo{font-size:22px}.grid{grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:16px}
+  .drawer{left:auto;top:0;bottom:0;width:380px;max-height:none;border-radius:0;border-top:none;border-left:1px solid var(--line);transform:translateX(105%)}
+  .drawer.open{transform:none}
+}

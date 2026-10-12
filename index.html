@@ -9,36 +9,37 @@
 <meta name="description" content="Catálogo de cartas One Piece Card Game de David Eduardo. Precios de referencia en pesos chilenos.">
 <meta property="og:title" content="Cartas One Piece Card Game">
 <meta property="og:description" content="Catálogo de cartas One Piece Card Game, precios de referencia en CLP.">
-<link rel="stylesheet" href="style.css?v=20261011a">
+<link rel="stylesheet" href="style.css?v=20261011b">
 </head>
 <body>
 <div class="demo-banner" id="demoBanner" hidden>🧪 MODO DEMO — estas cartas son solo ejemplos y no forman parte de la colección. <a href="./">Ver colección real</a></div>
-<header>
-  <div class="logo"><span class="skull" aria-hidden="true">☠</span> Cartas One Piece <span class="skull" aria-hidden="true">☠</span></div>
-  <div class="sub" id="sub">One Piece Card Game</div>
-  <div class="stats">
-    <div class="stat"><b id="stTotal">0</b><span>Cartas</span></div>
-    <div class="stat"><b id="stDist">0</b><span>Distintas</span></div>
-    <div class="stat"><b id="stValor">$0</b><span>Valor ref. CLP</span></div>
-  </div>
-</header>
-<div class="bar">
+<header class="top">
+  <div class="brand"><span class="logo">☠ Cartas One Piece</span><span class="tot" id="tot"></span></div>
   <div class="row">
     <label class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
-      <input id="q" type="search" placeholder="Buscar por nombre, código (OP01-001), subtipo…" autocomplete="off"></label>
-    <select id="sort" aria-label="Ordenar">
-      <option value="recientes">Más recientes</option>
-      <option value="codigo">Código</option>
-      <option value="precio_desc">Precio ↓</option>
-      <option value="precio_asc">Precio ↑</option>
-      <option value="nombre">Nombre A–Z</option>
-      <option value="costo">Costo</option>
-      <option value="poder">Poder</option>
-    </select>
+      <input id="q" type="search" placeholder="Buscar carta…" autocomplete="off"></label>
+    <button class="fbtn" id="fbtn" aria-expanded="false" aria-controls="drawer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M3 5h18M6 12h12M10 19h4"/></svg>Filtros<span class="fcount" id="fcount" hidden></span></button>
   </div>
-  <div class="filters" id="filters"></div>
-  <div class="meta-row"><span id="count"></span><button class="clear" id="clear">Limpiar filtros</button></div>
-</div>
+  <div class="fstate" id="fstate" hidden><span id="count"></span><button class="clear" id="clear">Limpiar</button></div>
+</header>
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="dhead"><b>Filtros</b><button class="ib sm" id="fclose" aria-label="Cerrar filtros">✕</button></div>
+  <div class="dbody">
+    <div class="fgroup"><span class="flabel">Ordenar</span>
+      <select id="sort" aria-label="Ordenar">
+        <option value="recientes">Más recientes</option>
+        <option value="codigo">Código</option>
+        <option value="precio_desc">Precio ↓</option>
+        <option value="precio_asc">Precio ↑</option>
+        <option value="nombre">Nombre A–Z</option>
+        <option value="costo">Costo</option>
+        <option value="poder">Poder</option>
+      </select></div>
+    <div id="filters"></div>
+  </div>
+  <div class="dfoot"><button class="clear2" id="clear2">Limpiar</button><button class="apply" id="apply">Ver cartas</button></div>
+</aside>
 <main>
   <div class="grid" id="grid"></div>
   <div class="empty" id="empty">No hay cartas con esos filtros.</div>
@@ -56,6 +57,6 @@
   <div class="stage"><div class="det" id="det"></div></div>
   <div class="nav"><button id="prev">‹ Anterior</button><span class="hint">desliza ⇆</span><button id="next">Siguiente ›</button></div>
 </div>
-<script src="app.js?v=20261011a"></script>
+<script src="app.js?v=20261011b"></script>
 </body>
 </html>

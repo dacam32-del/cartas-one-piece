@@ -6,7 +6,8 @@ Catálogo de mis cartas del **One Piece Card Game (OPTCG)**: código, nombre, co
 **Vista de ejemplo (demo, cartas que NO son de la colección):** https://dacam32-del.github.io/cartas-one-piece/?demo=1
 
 ## Qué tiene la página
-- Grilla de cartas con imagen, rareza, color, código y precio CLP.
+- Diseño "cartas primero": grilla de imágenes grandes (2 columnas en celular, más en escritorio) con solo una etiqueta de precio y la cantidad (xN) cuando hay más de una.
+- Encabezado compacto (título + total de cartas y valor). Los filtros y el orden están en un panel **Filtros** que se abre al tocar el botón (cerrado por defecto).
 - Búsqueda por nombre, código (`OP01-001`), subtipo, texto o notas (sin importar tildes).
 - Filtros por **color** (Rojo, Verde, Azul, Morado, Negro, Amarillo, Multicolor), **tipo** (Líder, Personaje, Evento, Escenario, DON!!), **rareza** (L, C, UC, R, SR, SEC, SP, TR, P, Alt Art), **set** y **estado**.
 - Orden por más recientes, código, precio, nombre, costo o poder.
