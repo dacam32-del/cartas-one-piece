@@ -4,7 +4,7 @@
   "actualizado": "2026-10-11",
   "dolar_clp": 979.01,
   "fuente_precios": "optcgapi.com (TCGplayer, USD) convertido a CLP",
-  "reglas_precio": "Precio referencia CLP = precio de mercado TCGplayer en USD × dólar del día, redondeado a $10. Se puede fijar a mano con --precio.",
+  "reglas_precio": "Precio de venta = precio de referencia (mercado TCGplayer USD × dólar del día, redondeado a $10); si la referencia es menor a $500 se le suman $50, y ninguna carta baja de $100. Desde $500 queda igual. Un precio fijado a mano con --precio manda.",
   "cartas": [
     {
       "id": 1,
@@ -28,11 +28,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.13,
-      "precio_ref_clp": 130,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Código: últimos dígitos borrosos en la foto; confirmado por nombre, color, costo 5/6000 y tipo (única coincidencia).",
       "imagen": "img/OP11-003.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 130,
+      "precio_venta_clp": 180,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 2,
@@ -56,11 +58,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.05,
-      "precio_ref_clp": 50,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP11-034.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 50,
+      "precio_venta_clp": 100,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 3,
@@ -80,15 +84,17 @@
       "atributo": "Wisdom",
       "subtipos": "Land of Wano Kurozumi Clan",
       "texto": "[On Play] Add up to 1 \"SMILE\" type card with a cost of 5 or less from your trash to your hand.",
-      "cantidad": 2,
+      "cantidad": 4,
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.06,
-      "precio_ref_clp": 60,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP11-085.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 60,
+      "precio_venta_clp": 110,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 4,
@@ -112,11 +118,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.07,
-      "precio_ref_clp": 70,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP05-108.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 70,
+      "precio_venta_clp": 120,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 5,
@@ -140,11 +148,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.04,
-      "precio_ref_clp": 40,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP09-007.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 40,
+      "precio_venta_clp": 100,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 6,
@@ -168,11 +178,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.05,
-      "precio_ref_clp": 50,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP09-116.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 50,
+      "precio_venta_clp": 100,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 7,
@@ -192,15 +204,17 @@
       "atributo": "Special",
       "subtipos": "Navy",
       "texto": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[DON!! x1] This Character cannot be K.O.'d by effects of Characters without the (Special) attribute.",
-      "cantidad": 2,
+      "cantidad": 3,
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.06,
-      "precio_ref_clp": 60,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Código: últimos dígitos borrosos; confirmado por nombre, color, costo 4/5000 y tipo Navy (única coincidencia).",
       "imagen": "img/OP11-005.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 60,
+      "precio_venta_clp": 110,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 8,
@@ -224,11 +238,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.07,
-      "precio_ref_clp": 70,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP10-043.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 70,
+      "precio_venta_clp": 120,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 9,
@@ -248,15 +264,17 @@
       "atributo": "Slash",
       "subtipos": "Baroque Works",
       "texto": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.) [Trigger] DON!! -1 (You may return the specified number of DON!! cards from your field to your DON!! deck.): Play this card.",
-      "cantidad": 3,
+      "cantidad": 5,
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.06,
-      "precio_ref_clp": 60,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Código borroso en la foto; es la única Miss.MerryChristmas(Drophy) morada costo 4/4000 (OP04, no OP10).",
       "imagen": "img/OP04-067.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 60,
+      "precio_venta_clp": 110,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 10,
@@ -280,11 +298,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.06,
-      "precio_ref_clp": 60,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP10-023.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 60,
+      "precio_venta_clp": 110,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 11,
@@ -308,11 +328,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.07,
-      "precio_ref_clp": 70,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP05-033.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 70,
+      "precio_venta_clp": 120,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 12,
@@ -336,11 +358,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.05,
-      "precio_ref_clp": 50,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Código algo borroso; confirmado por nombre, color, costo 2/2000 y tipos Minks/Heart Pirates.",
       "imagen": "img/OP09-074.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 50,
+      "precio_venta_clp": 100,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 13,
@@ -364,11 +388,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.09,
-      "precio_ref_clp": 90,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP10-081.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 90,
+      "precio_venta_clp": 140,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 14,
@@ -392,11 +418,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.06,
-      "precio_ref_clp": 60,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP11-072.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 60,
+      "precio_venta_clp": 110,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 15,
@@ -420,11 +448,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.06,
-      "precio_ref_clp": 60,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP11-046.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 60,
+      "precio_venta_clp": 110,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 16,
@@ -444,15 +474,17 @@
       "atributo": "",
       "subtipos": "Donquixote Pirates The Seven Warlords of the Sea",
       "texto": "[Main] / [Counter] Rest up to 1 of your opponent's Leader or Character cards. Then, K.O. up to 1 of your opponent's rested Characters with a cost of 6 or less. [Trigger] Set up to 5 of your DON!! cards as active.",
-      "cantidad": 4,
+      "cantidad": 5,
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.09,
-      "precio_ref_clp": 90,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Código parcial (OP04-03?); confirmado por texto y tipos Seven Warlords/Donquixote Pirates (la versión OP10-040 tiene otros tipos).",
       "imagen": "img/OP04-038.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 90,
+      "precio_venta_clp": 140,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 17,
@@ -476,11 +508,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.06,
-      "precio_ref_clp": 60,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Código parcial (OP11-08?); confirmado por nombre, color, costo 4/5000 y tipo Navy.",
       "imagen": "img/OP11-088.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 60,
+      "precio_venta_clp": 110,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 18,
@@ -504,11 +538,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.07,
-      "precio_ref_clp": 70,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Código borroso; confirmado por nombre, color azul y costo 1 (única coincidencia).",
       "imagen": "img/OP11-059.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 70,
+      "precio_venta_clp": 120,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 19,
@@ -532,11 +568,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.08,
-      "precio_ref_clp": 80,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP10-061.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 80,
+      "precio_venta_clp": 130,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 20,
@@ -560,11 +598,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.15,
-      "precio_ref_clp": 150,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Código parcial (OP09-10?); confirmado por nombre, color, costo 1/0 y texto.",
       "imagen": "img/OP09-106.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 150,
+      "precio_venta_clp": 200,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 21,
@@ -588,11 +628,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.04,
-      "precio_ref_clp": 40,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP11-050.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 40,
+      "precio_venta_clp": 100,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 22,
@@ -616,11 +658,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.09,
-      "precio_ref_clp": 90,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Código parcial (OP11-02?); confirmado por nombre, color, costo 2 y tipos Navy/SWORD/Drake Pirates.",
       "imagen": "img/OP11-020.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 90,
+      "precio_venta_clp": 140,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 23,
@@ -644,11 +688,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.16,
-      "precio_ref_clp": 160,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Dos copias idénticas (mismo código OP04-014 UC).",
       "imagen": "img/OP04-014.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 160,
+      "precio_venta_clp": 210,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 24,
@@ -672,11 +718,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.2,
-      "precio_ref_clp": 200,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Versión normal (no Alt Art / Wanted Poster / SP).",
       "imagen": "img/OP09-051.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 200,
+      "precio_venta_clp": 250,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 25,
@@ -696,15 +744,17 @@
       "atributo": "Special",
       "subtipos": "Big Mom Pirates Homies",
       "texto": "[Trigger] Play this card.",
-      "cantidad": 2,
+      "cantidad": 3,
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.05,
-      "precio_ref_clp": 50,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP04-113.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 50,
+      "precio_venta_clp": 100,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 26,
@@ -728,11 +778,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.07,
-      "precio_ref_clp": 70,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP09-010.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 70,
+      "precio_venta_clp": 120,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 27,
@@ -756,11 +808,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.08,
-      "precio_ref_clp": 80,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Código parcial (ST25-00?); confirmado por nombre, color azul, costo 4/1000 y tipo Cross Guild (única coincidencia).",
       "imagen": "img/ST25-002.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 80,
+      "precio_venta_clp": 130,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 28,
@@ -785,11 +839,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.15,
-      "precio_ref_clp": 150,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP04-020.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 150,
+      "precio_venta_clp": 200,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 29,
@@ -814,11 +870,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.21,
-      "precio_ref_clp": 210,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Dos copias idénticas (OP04-001, versión normal).",
       "imagen": "img/OP04-001.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 210,
+      "precio_venta_clp": 260,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 30,
@@ -843,11 +901,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.17,
-      "precio_ref_clp": 170,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP04-039.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 170,
+      "precio_venta_clp": 220,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 31,
@@ -871,11 +931,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.12,
-      "precio_ref_clp": 120,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Último dígito borroso; arte comparado: es la versión normal de OP-11 (no la del Starter Deck 34 ni Alt Art).",
       "imagen": "img/OP11-062.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 120,
+      "precio_venta_clp": 170,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 32,
@@ -900,11 +962,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.21,
-      "precio_ref_clp": 210,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Dos copias idénticas (OP04-058, versión normal).",
       "imagen": "img/OP04-058.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 210,
+      "precio_venta_clp": 260,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 33,
@@ -929,11 +993,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.13,
-      "precio_ref_clp": 130,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP11-001.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 130,
+      "precio_venta_clp": 180,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 34,
@@ -958,11 +1024,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.2,
-      "precio_ref_clp": 200,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP11-041.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 200,
+      "precio_venta_clp": 250,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 35,
@@ -987,11 +1055,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.18,
-      "precio_ref_clp": 180,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Dos copias idénticas (OP04-019, versión normal).",
       "imagen": "img/OP04-019.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 180,
+      "precio_venta_clp": 230,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 36,
@@ -1015,11 +1085,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.07,
-      "precio_ref_clp": 70,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP04-095.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 70,
+      "precio_venta_clp": 120,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 37,
@@ -1039,15 +1111,17 @@
       "atributo": "Strike",
       "subtipos": "Caribou Pirates",
       "texto": "[On Play] Trash 1 card from your hand.\n[Activate: Main] You may trash this Character: Play up to 1 [Caribou] with a cost of 4 or less from your trash.",
-      "cantidad": 1,
+      "cantidad": 2,
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.06,
-      "precio_ref_clp": 60,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Código parcial (OP11-08?); confirmado por nombre, color negro, costo 3/5000 y tipo Caribou Pirates.",
       "imagen": "img/OP11-086.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 60,
+      "precio_venta_clp": 110,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 38,
@@ -1071,11 +1145,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.08,
-      "precio_ref_clp": 80,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP04-101.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 80,
+      "precio_venta_clp": 130,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 39,
@@ -1095,15 +1171,17 @@
       "atributo": "Wisdom",
       "subtipos": "Cross Guild",
       "texto": "If you have 2 or more Characters with a base cost of 5 or more, this Character gains [Blocker] and +1 cost.\n(After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[On K.O.] If your Leader is [Buggy] and you have 3 or less cards in your hand, draw 1 card.",
-      "cantidad": 1,
+      "cantidad": 2,
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.1,
-      "precio_ref_clp": 100,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/ST25-005.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 100,
+      "precio_venta_clp": 150,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 40,
@@ -1127,11 +1205,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.06,
-      "precio_ref_clp": 60,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Código borroso; confirmado por nombre, color morado, costo 3/4000 y tipo Baroque Works (única coincidencia).",
       "imagen": "img/OP04-070.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 60,
+      "precio_venta_clp": 110,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 41,
@@ -1155,11 +1235,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 1.62,
-      "precio_ref_clp": 1590,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Promo P-061 (sin sello WINNER), dos copias idénticas. Confirmado por David: vienen del Starter Deck 16 (Uta), así que es la reimpresión ST-16 (US$1,62), no la promo de Uta Deck Battle.",
       "imagen": "img/P-061.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 1590,
+      "precio_venta_clp": 1590,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 42,
@@ -1183,11 +1265,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.05,
-      "precio_ref_clp": 50,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Código parcial (OP11-11?); confirmado por nombre, color amarillo y costo 6 (única coincidencia).",
       "imagen": "img/OP11-116.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 50,
+      "precio_venta_clp": 100,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 43,
@@ -1207,15 +1291,17 @@
       "atributo": "",
       "subtipos": "Alabasta Straw Hat Crew",
       "texto": "[Counter] Give up to 1 of your opponent's Leader or Character cards -2000 power during this turn. Then, if your Leader is active, give up to 1 of your opponent's Leader or Character cards -1000 power during this turn.",
-      "cantidad": 1,
+      "cantidad": 2,
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.1,
-      "precio_ref_clp": 100,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP04-017.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 100,
+      "precio_venta_clp": 150,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 44,
@@ -1239,11 +1325,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.15,
-      "precio_ref_clp": 150,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP11-115.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 150,
+      "precio_venta_clp": 200,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 45,
@@ -1267,11 +1355,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.14,
-      "precio_ref_clp": 140,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Versión normal (no Manga).",
       "imagen": "img/OP09-057.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 140,
+      "precio_venta_clp": 190,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 46,
@@ -1295,11 +1385,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.06,
-      "precio_ref_clp": 60,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP04-055.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 60,
+      "precio_venta_clp": 110,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 47,
@@ -1323,11 +1415,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.06,
-      "precio_ref_clp": 60,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP04-079.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 60,
+      "precio_venta_clp": 110,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 48,
@@ -1351,11 +1445,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.11,
-      "precio_ref_clp": 110,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Dos copias idénticas (OP04-080 UC).",
       "imagen": "img/OP04-080.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 110,
+      "precio_venta_clp": 160,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 49,
@@ -1379,11 +1475,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.1,
-      "precio_ref_clp": 100,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP04-041.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 100,
+      "precio_venta_clp": 150,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 50,
@@ -1407,11 +1505,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.08,
-      "precio_ref_clp": 80,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Código borroso (OP11-0??); confirmado por nombre, color morado, costo 1/1000 y tipo Big Mom Pirates (la otra Anana es ST07, amarilla).",
       "imagen": "img/OP11-065.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 80,
+      "precio_venta_clp": 130,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 51,
@@ -1435,11 +1535,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.11,
-      "precio_ref_clp": 110,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). El borde azul oscuro es el marco normal de los Stage (comparado con la imagen oficial); versión normal, no Pirate Foil.",
       "imagen": "img/OP04-096.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 110,
+      "precio_venta_clp": 160,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 52,
@@ -1463,11 +1565,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.07,
-      "precio_ref_clp": 70,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP04-062.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 70,
+      "precio_venta_clp": 120,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 53,
@@ -1491,11 +1595,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.07,
-      "precio_ref_clp": 70,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP04-012.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 70,
+      "precio_venta_clp": 120,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 54,
@@ -1515,15 +1621,17 @@
       "atributo": "",
       "subtipos": "The Four Emperors Big Mom Pirates",
       "texto": "[Main] Choose a cost and reveal 1 card from the top of your opponent's deck. If the revealed card has the chosen cost, K.O. up to 1 of your opponent's Characters with a base cost of 8 or less.\n[Trigger] Add up to 1 DON!! card from your DON!! deck and set it as active.",
-      "cantidad": 1,
+      "cantidad": 2,
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.05,
-      "precio_ref_clp": 50,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Código borroso; confirmado por nombre, color morado, costo 6 y tipos Four Emperors/Big Mom Pirates (única coincidencia).",
       "imagen": "img/OP11-081.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 50,
+      "precio_venta_clp": 100,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 55,
@@ -1547,11 +1655,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.12,
-      "precio_ref_clp": 120,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP04-009.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 120,
+      "precio_venta_clp": 170,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 56,
@@ -1575,11 +1685,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.09,
-      "precio_ref_clp": 90,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP04-088.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 90,
+      "precio_venta_clp": 140,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 57,
@@ -1603,11 +1715,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.04,
-      "precio_ref_clp": 40,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP11-024.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 40,
+      "precio_venta_clp": 100,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 58,
@@ -1631,11 +1745,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.04,
-      "precio_ref_clp": 40,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Código parcial (OP11-07?); confirmado por nombre, color morado, costo 5/5000 y tipo Impel Down.",
       "imagen": "img/OP11-076.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 40,
+      "precio_venta_clp": 100,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 59,
@@ -1659,11 +1775,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.05,
-      "precio_ref_clp": 50,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP04-111.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 50,
+      "precio_venta_clp": 100,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 60,
@@ -1687,11 +1805,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.09,
-      "precio_ref_clp": 90,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Código borroso; confirmado por nombre, color rojo, costo 1/3000 y tipos Alabasta/Straw Hat Crew (única coincidencia).",
       "imagen": "img/OP04-007.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 90,
+      "precio_venta_clp": 140,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 61,
@@ -1715,11 +1835,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.14,
-      "precio_ref_clp": 140,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Último dígito borroso; confirmado por nombre, color verde, costo 4/5000 y tipo Neptunian (única coincidencia).",
       "imagen": "img/OP11-036.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 140,
+      "precio_venta_clp": 190,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 62,
@@ -1743,11 +1865,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.07,
-      "precio_ref_clp": 70,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP11-025.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 70,
+      "precio_venta_clp": 120,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 63,
@@ -1771,11 +1895,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.06,
-      "precio_ref_clp": 60,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP11-093.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 60,
+      "precio_venta_clp": 110,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 64,
@@ -1799,11 +1925,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.04,
-      "precio_ref_clp": 40,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP11-090.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 40,
+      "precio_venta_clp": 100,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 65,
@@ -1827,11 +1955,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.05,
-      "precio_ref_clp": 50,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP11-019.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 50,
+      "precio_venta_clp": 100,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 66,
@@ -1855,11 +1985,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.12,
-      "precio_ref_clp": 120,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Código leído ST23-004; confirmado por nombre, color rojo, costo 1/2000 y tipos FILM/Supernovas/Straw Hat Crew.",
       "imagen": "img/ST23-004.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 120,
+      "precio_venta_clp": 170,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 67,
@@ -1883,11 +2015,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.09,
-      "precio_ref_clp": 90,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Código parcial (OP11-05?); confirmado por nombre, color azul, costo 6/7000 y tipos Dressrosa/Supernovas.",
       "imagen": "img/OP11-055.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 90,
+      "precio_venta_clp": 140,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 68,
@@ -1907,15 +2041,17 @@
       "atributo": "Strike",
       "subtipos": "Animal Water Seven",
       "texto": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.) [On Your Opponent's Attack] DON!! -1 (You may return the specified number of DON!! cards from your field to your DON!! deck.): Return up to 1 of your opponent's Characters with a cost of 2 or less to the owner's hand.",
-      "cantidad": 1,
+      "cantidad": 3,
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.06,
-      "precio_ref_clp": 60,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP04-068.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 60,
+      "precio_venta_clp": 110,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 69,
@@ -1939,11 +2075,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.07,
-      "precio_ref_clp": 70,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Código parcial (OP09-05?). Ojo: NO es la Mohji ST25-005 (esta es costo 5/5000, counter +2000). Probablemente la reimpresión del Starter Deck 25 (mismo código y precio que la original de OP-09).",
       "imagen": "img/OP09-053.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 70,
+      "precio_venta_clp": 120,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 70,
@@ -1967,11 +2105,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.19,
-      "precio_ref_clp": 190,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Impresión del Starter Deck 16 (US$0,19), no la promo original.",
       "imagen": "img/P-058.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 190,
+      "precio_venta_clp": 240,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 71,
@@ -1995,11 +2135,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.14,
-      "precio_ref_clp": 140,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Impresión del Starter Deck 16 (US$0,14), no la promo original.",
       "imagen": "img/P-057.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 140,
+      "precio_venta_clp": 190,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 72,
@@ -2023,11 +2165,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.17,
-      "precio_ref_clp": 170,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Dos copias idénticas. Impresión del Starter Deck 16 (US$0,17), no la del ST-11.",
       "imagen": "img/ST11-005.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 170,
+      "precio_venta_clp": 220,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 73,
@@ -2047,15 +2191,17 @@
       "atributo": "Strike",
       "subtipos": "Animal Kingdom Pirates Giant",
       "texto": "NULL",
-      "cantidad": 1,
+      "cantidad": 3,
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.04,
-      "precio_ref_clp": 40,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP04-054.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 40,
+      "precio_venta_clp": 100,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 74,
@@ -2079,11 +2225,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.16,
-      "precio_ref_clp": 160,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP04-011.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 160,
+      "precio_venta_clp": 210,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 75,
@@ -2107,11 +2255,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.1,
-      "precio_ref_clp": 100,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Código parcial (OP04-05?); confirmado por nombre, color azul, costo 2/0 y tipo East Blue (única coincidencia).",
       "imagen": "img/OP04-050.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 100,
+      "precio_venta_clp": 150,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 76,
@@ -2135,11 +2285,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.06,
-      "precio_ref_clp": 60,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP04-107.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 60,
+      "precio_venta_clp": 110,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 77,
@@ -2163,11 +2315,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.1,
-      "precio_ref_clp": 100,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Dos copias idénticas (OP04-087).",
       "imagen": "img/OP04-087.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 100,
+      "precio_venta_clp": 150,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 78,
@@ -2187,15 +2341,17 @@
       "atributo": "Strike",
       "subtipos": "FILM Neo Navy",
       "texto": "[DON!! x1] [When Attacking] Give up to 1 of your opponent's (Special) attribute Characters 5000 power during this turn.",
-      "cantidad": 1,
+      "cantidad": 2,
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.06,
-      "precio_ref_clp": 60,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP11-006.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 60,
+      "precio_venta_clp": 110,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 79,
@@ -2219,11 +2375,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.11,
-      "precio_ref_clp": 110,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP11-009.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 110,
+      "precio_venta_clp": 160,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 80,
@@ -2247,11 +2405,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.05,
-      "precio_ref_clp": 50,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP04-076.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 50,
+      "precio_venta_clp": 100,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 81,
@@ -2275,11 +2435,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.05,
-      "precio_ref_clp": 50,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP11-043.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 50,
+      "precio_venta_clp": 100,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 82,
@@ -2303,11 +2465,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.07,
-      "precio_ref_clp": 70,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Versión normal (no Pirate Foil).",
       "imagen": "img/OP04-077.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 70,
+      "precio_venta_clp": 120,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 83,
@@ -2331,11 +2495,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.05,
-      "precio_ref_clp": 50,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP04-037.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 50,
+      "precio_venta_clp": 100,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 84,
@@ -2355,15 +2521,17 @@
       "atributo": "",
       "subtipos": "Donquixote Pirates",
       "texto": "[Counter] Look at 5 cards from the top of your deck; reveal up to 1 [Donquixote Pirates] type card and add it to your hand. Then, place the rest at the bottom of your deck in any order. [Trigger] Activate this card's [Counter] effect.",
-      "cantidad": 1,
+      "cantidad": 2,
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.05,
-      "precio_ref_clp": 50,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Código parcial (OP04-03?); confirmado por nombre, color verde, costo 1 y tipo Donquixote Pirates. Versión normal (no foil).",
       "imagen": "img/OP04-036.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 50,
+      "precio_venta_clp": 100,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 85,
@@ -2387,11 +2555,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.14,
-      "precio_ref_clp": 140,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP11-053.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 140,
+      "precio_venta_clp": 190,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 86,
@@ -2415,11 +2585,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.06,
-      "precio_ref_clp": 60,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP04-025.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 60,
+      "precio_venta_clp": 110,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 87,
@@ -2439,15 +2611,17 @@
       "atributo": "Special",
       "subtipos": "Animal Kingdom Pirates",
       "texto": "[Activate:Main] (2) (You may rest the specified number of DON!! cards in your cost area.) You may rest this Character: Draw 1 card. [Trigger] Play this card.",
-      "cantidad": 1,
+      "cantidad": 2,
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.07,
-      "precio_ref_clp": 70,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP04-052.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 70,
+      "precio_venta_clp": 120,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 88,
@@ -2471,11 +2645,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.05,
-      "precio_ref_clp": 50,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP04-033.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 50,
+      "precio_venta_clp": 100,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 89,
@@ -2499,11 +2675,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.08,
-      "precio_ref_clp": 80,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP04-061.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 80,
+      "precio_venta_clp": 130,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 90,
@@ -2527,11 +2705,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.18,
-      "precio_ref_clp": 180,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP04-010.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 180,
+      "precio_venta_clp": 230,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 91,
@@ -2551,15 +2731,17 @@
       "atributo": "Wisdom",
       "subtipos": "Land of Wano",
       "texto": "[On Play] Add up to 1 of your opponent's [Animal] or [SMILE] type Characters with a cost of 3 or less to the top of your opponent's Life cards face-up.",
-      "cantidad": 1,
+      "cantidad": 2,
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.08,
-      "precio_ref_clp": 80,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Código algo borroso; confirmado por nombre, color amarillo, costo 1/0 y tipo Land of Wano.",
       "imagen": "img/OP04-097.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 80,
+      "precio_venta_clp": 130,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 92,
@@ -2583,11 +2765,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.07,
-      "precio_ref_clp": 70,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP11-100.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 70,
+      "precio_venta_clp": 120,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 93,
@@ -2609,11 +2793,12 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": null,
-      "precio_ref_clp": null,
       "dolar_clp": 979.01,
       "notas": "Carta DON!! estándar (arte en blanco y negro 'ドン!!'), viene en cada starter deck/sobre; no tiene código de carta ni precio de mercado propio. No se puede saber de qué deck viene. Imagen: foto de David.",
       "imagen": "img/DON.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": null,
+      "precio_venta_clp": null
     },
     {
       "id": 94,
@@ -2637,11 +2822,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.05,
-      "precio_ref_clp": 50,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP04-047.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 50,
+      "precio_venta_clp": 100,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 95,
@@ -2661,15 +2848,17 @@
       "atributo": "Wisdom",
       "subtipos": "East Blue",
       "texto": "[On Play] Up to 1 of your \"Slash\" attribute Characters gains +3000 power during this turn. Then, trash 1 card from the top of your deck.",
-      "cantidad": 1,
+      "cantidad": 2,
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.07,
-      "precio_ref_clp": 70,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP04-042.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 70,
+      "precio_venta_clp": 120,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 96,
@@ -2689,15 +2878,17 @@
       "atributo": "Ranged",
       "subtipos": "Red-Haired Pirates",
       "texto": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)\n[On K.O.] If your Leader has the \"Red-Haired Pirates\" type, K.O. up to 1 of your opponent's Characters with a base power of 6000 or less.",
-      "cantidad": 1,
+      "cantidad": 4,
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.13,
-      "precio_ref_clp": 130,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Podría ser la reimpresión del Starter Deck 23 (mismo código, US$0,08); en la foto no se distingue, se usa el precio de la original de OP-09.",
       "imagen": "img/OP09-015.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 130,
+      "precio_venta_clp": 180,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 97,
@@ -2721,11 +2912,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.11,
-      "precio_ref_clp": 110,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Versión normal (no Alt Art ni Pirate Foil).",
       "imagen": "img/OP09-014.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 110,
+      "precio_venta_clp": 160,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 98,
@@ -2749,11 +2942,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.06,
-      "precio_ref_clp": 60,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP04-049.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 60,
+      "precio_venta_clp": 110,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 99,
@@ -2777,11 +2972,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.07,
-      "precio_ref_clp": 70,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Código borroso (OP04-1??); confirmado por nombre, color amarillo, costo 3/4000 y tipo Big Mom Pirates (única coincidencia).",
       "imagen": "img/OP04-106.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 70,
+      "precio_venta_clp": 120,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 100,
@@ -2805,11 +3002,13 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.11,
-      "precio_ref_clp": 110,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026).",
       "imagen": "img/OP11-037.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 110,
+      "precio_venta_clp": 160,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     },
     {
       "id": 101,
@@ -2833,11 +3032,633 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 0.11,
-      "precio_ref_clp": 110,
       "dolar_clp": 979.01,
       "notas": "Precio: TCGplayer market vía optcgapi.com (10-oct-2026) × dólar $979,01 (11-oct-2026). Código parcial (ST16-00?); confirmado por nombre, color verde, costo 3/4000 y tipos FILM/Big Mom Pirates. Del Starter Deck 16 (Uta), versión normal.",
       "imagen": "img/ST16-003.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 110,
+      "precio_venta_clp": 160,
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
+    },
+    {
+      "id": 102,
+      "codigo": "OP11-039",
+      "nombre": "Vagabond Drill",
+      "color": [
+        "Verde"
+      ],
+      "tipo": "Event",
+      "rareza": "C",
+      "alt_art": false,
+      "set": "OP-11 A Fist of Divine Speed",
+      "costo": 1,
+      "poder": null,
+      "counter": null,
+      "vida": null,
+      "atributo": "",
+      "subtipos": "Fish-Man The Sun Pirates Fish-Man Island",
+      "texto": "[Counter] Up to 1 of your \"Fish-Man\" or \"Merfolk\" type Leader or Character cards gains +3000 power during this battle. Then, rest up to 1 of your opponent's Characters with a cost of 3 or less.\n[Trigger] Rest up to 1 of your opponent's Characters with a cost of 4 or less.",
+      "cantidad": 1,
+      "estado": "LP",
+      "idioma": "Inglés",
+      "precio_mercado_usd": 0.06,
+      "dolar_clp": 979.01,
+      "precio_referencia": 60,
+      "precio_venta_clp": 110,
+      "precio_manual": false,
+      "notas": "",
+      "imagen": "img/OP11-039.webp",
+      "fecha_alta": "2026-10-11",
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
+    },
+    {
+      "id": 103,
+      "codigo": "OP11-103",
+      "nombre": "Long-Jaw Neptunian",
+      "color": [
+        "Amarillo"
+      ],
+      "tipo": "Character",
+      "rareza": "C",
+      "alt_art": false,
+      "set": "OP-11 A Fist of Divine Speed",
+      "costo": 5,
+      "poder": 7000,
+      "counter": 0,
+      "vida": null,
+      "atributo": "Strike",
+      "subtipos": "Neptunian",
+      "texto": "[Activate: Main] If your Leader is [Shirahoshi], you may rest this Character and turn 1 card from the top of your Life cards face-down: K.O. up to 1 of your opponent's Characters with a cost of 3 or less.",
+      "cantidad": 1,
+      "estado": "LP",
+      "idioma": "Inglés",
+      "precio_mercado_usd": 0.12,
+      "dolar_clp": 979.01,
+      "precio_referencia": 120,
+      "precio_venta_clp": 170,
+      "precio_manual": false,
+      "notas": "",
+      "imagen": "img/OP11-103.webp",
+      "fecha_alta": "2026-10-11",
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
+    },
+    {
+      "id": 104,
+      "codigo": "OP04-021",
+      "nombre": "Viola",
+      "color": [
+        "Verde"
+      ],
+      "tipo": "Character",
+      "rareza": "C",
+      "alt_art": false,
+      "set": "OP-04 Kingdoms of Intrigue",
+      "costo": 3,
+      "poder": 3000,
+      "counter": 2000,
+      "vida": null,
+      "atributo": "Special",
+      "subtipos": "Donquixote Pirates",
+      "texto": "[On Your Opponent's Attack] (2) (You may rest the specified number of DON!! cards in your cost area.): Rest up to 1 of your opponent's DON!! cards.",
+      "cantidad": 1,
+      "estado": "LP",
+      "idioma": "Inglés",
+      "precio_mercado_usd": 0.1,
+      "dolar_clp": 979.01,
+      "precio_referencia": 100,
+      "precio_venta_clp": 150,
+      "precio_manual": false,
+      "notas": "",
+      "imagen": "img/OP04-021.webp",
+      "fecha_alta": "2026-10-11",
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
+    },
+    {
+      "id": 105,
+      "codigo": "OP11-021",
+      "nombre": "Jinbe",
+      "color": [
+        "Verde"
+      ],
+      "tipo": "Leader",
+      "rareza": "L",
+      "alt_art": false,
+      "set": "OP-11 A Fist of Divine Speed",
+      "costo": null,
+      "poder": 5000,
+      "counter": null,
+      "vida": 5,
+      "atributo": "Strike",
+      "subtipos": "Fish-Man Straw Hat Crew",
+      "texto": "[End of Your Turn] If you have 6 or less cards in your hand, set up to 1 of your \"Fish-Man\" or \"Merfolk\" type Characters and up to 1 of your DON!! cards as active.",
+      "cantidad": 1,
+      "estado": "LP",
+      "idioma": "Inglés",
+      "precio_mercado_usd": 0.15,
+      "dolar_clp": 979.01,
+      "precio_referencia": 150,
+      "precio_venta_clp": 200,
+      "precio_manual": false,
+      "notas": "",
+      "imagen": "img/OP11-021.webp",
+      "fecha_alta": "2026-10-11",
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
+    },
+    {
+      "id": 106,
+      "codigo": "OP04-006",
+      "nombre": "Koza",
+      "color": [
+        "Rojo"
+      ],
+      "tipo": "Character",
+      "rareza": "UC",
+      "alt_art": false,
+      "set": "OP-04 Kingdoms of Intrigue",
+      "costo": 3,
+      "poder": 3000,
+      "counter": 2000,
+      "vida": null,
+      "atributo": "Slash",
+      "subtipos": "Alabasta",
+      "texto": "[When Attacking] You may give your 1 active Leader -5000 power during this turn: This Character gains +2000 power until the start of your next turn.",
+      "cantidad": 1,
+      "estado": "LP",
+      "idioma": "Inglés",
+      "precio_mercado_usd": 0.07,
+      "dolar_clp": 979.01,
+      "precio_referencia": 70,
+      "precio_venta_clp": 120,
+      "precio_manual": false,
+      "notas": "",
+      "imagen": "img/OP04-006.webp",
+      "fecha_alta": "2026-10-11",
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
+    },
+    {
+      "id": 107,
+      "codigo": "OP04-005",
+      "nombre": "Kung Fu Jugon",
+      "color": [
+        "Rojo"
+      ],
+      "tipo": "Character",
+      "rareza": "C",
+      "alt_art": false,
+      "set": "OP-04 Kingdoms of Intrigue",
+      "costo": 1,
+      "poder": 1000,
+      "counter": 1000,
+      "vida": null,
+      "atributo": "Strike",
+      "subtipos": "Animal Alabasta",
+      "texto": "If you have a [Kung Fu Jugon] other than this Character, this Character gains [Blocker]. (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)",
+      "cantidad": 3,
+      "estado": "LP",
+      "idioma": "Inglés",
+      "precio_mercado_usd": 0.12,
+      "dolar_clp": 979.01,
+      "precio_referencia": 120,
+      "precio_venta_clp": 170,
+      "precio_manual": false,
+      "notas": "",
+      "imagen": "img/OP04-005.webp",
+      "fecha_alta": "2026-10-11",
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
+    },
+    {
+      "id": 108,
+      "codigo": "OP04-069",
+      "nombre": "Mr.2.Bon.Kurei (Bentham)",
+      "color": [
+        "Morado"
+      ],
+      "tipo": "Character",
+      "rareza": "UC",
+      "alt_art": false,
+      "set": "OP-04 Kingdoms of Intrigue",
+      "costo": 3,
+      "poder": 4000,
+      "counter": 1000,
+      "vida": null,
+      "atributo": "Strike",
+      "subtipos": "Baroque Works",
+      "texto": "[On Your Opponent's Attack] DON!! -1 (You may return the specified number of DON!! cards from your field to your DON!! deck.): This Character's base power becomes the same as the power of your opponent's attacking Leader or Character during this turn. [Trigger] DON!! -1: Play this card.",
+      "cantidad": 2,
+      "estado": "LP",
+      "idioma": "Inglés",
+      "precio_mercado_usd": 0.1,
+      "dolar_clp": 979.01,
+      "precio_referencia": 100,
+      "precio_venta_clp": 150,
+      "precio_manual": false,
+      "notas": "",
+      "imagen": "img/OP04-069.webp",
+      "fecha_alta": "2026-10-11",
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
+    },
+    {
+      "id": 109,
+      "codigo": "OP04-085",
+      "nombre": "Suleiman",
+      "color": [
+        "Negro"
+      ],
+      "tipo": "Character",
+      "rareza": "UC",
+      "alt_art": false,
+      "set": "OP-04 Kingdoms of Intrigue",
+      "costo": 3,
+      "poder": 4000,
+      "counter": 1000,
+      "vida": null,
+      "atributo": "Slash",
+      "subtipos": "Dressrosa",
+      "texto": "[On Play] [When Attacking] If your Leader has the [Dressrosa] type, give up to 1 of your opponent's Characters -2 cost during this turn. Then, trash 1 card from the top of your deck.",
+      "cantidad": 1,
+      "estado": "LP",
+      "idioma": "Inglés",
+      "precio_mercado_usd": 0.08,
+      "dolar_clp": 979.01,
+      "precio_referencia": 80,
+      "precio_venta_clp": 130,
+      "precio_manual": false,
+      "notas": "",
+      "imagen": "img/OP04-085.webp",
+      "fecha_alta": "2026-10-11",
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
+    },
+    {
+      "id": 110,
+      "codigo": "OP09-020",
+      "nombre": "Come On!! We'll Fight You!!",
+      "color": [
+        "Rojo"
+      ],
+      "tipo": "Event",
+      "rareza": "R",
+      "alt_art": false,
+      "set": "OP-09 Emperors in the New World",
+      "costo": 1,
+      "poder": null,
+      "counter": null,
+      "vida": null,
+      "atributo": "",
+      "subtipos": "The Four Emperors Red-Haired Pirates",
+      "texto": "[Main] Look at 5 cards from the top of your deck; reveal up to 1 \"Red-Haired Pirates\" type card other than [Come On!! We'll Fight You!!] and add it to your hand. Then, place the rest at the bottom of your deck in any order.\n[Trigger] Draw 1 card.",
+      "cantidad": 1,
+      "estado": "LP",
+      "idioma": "Inglés",
+      "precio_mercado_usd": 0.16,
+      "dolar_clp": 979.01,
+      "precio_referencia": 160,
+      "precio_venta_clp": 210,
+      "precio_manual": false,
+      "notas": "",
+      "imagen": "img/OP09-020.webp",
+      "fecha_alta": "2026-10-11",
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
+    },
+    {
+      "id": 111,
+      "codigo": "OP04-084",
+      "nombre": "Stussy",
+      "color": [
+        "Negro"
+      ],
+      "tipo": "Character",
+      "rareza": "C",
+      "alt_art": false,
+      "set": "OP-04 Kingdoms of Intrigue",
+      "costo": 2,
+      "poder": 3000,
+      "counter": 0,
+      "vida": null,
+      "atributo": "Special",
+      "subtipos": "CP0",
+      "texto": "[On Play] Look at 3 cards from the top of your deck and play up to 1 Character card with a type including \"CP\" other than [Stussy] and a cost of 2 or less. Then, trash the rest.",
+      "cantidad": 2,
+      "estado": "LP",
+      "idioma": "Inglés",
+      "precio_mercado_usd": 0.12,
+      "dolar_clp": 979.01,
+      "precio_referencia": 120,
+      "precio_venta_clp": 170,
+      "precio_manual": false,
+      "notas": "",
+      "imagen": "img/OP04-084.webp",
+      "fecha_alta": "2026-10-11",
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
+    },
+    {
+      "id": 112,
+      "codigo": "OP11-117",
+      "nombre": "Fish-Man Island",
+      "color": [
+        "Amarillo"
+      ],
+      "tipo": "Stage",
+      "rareza": "C",
+      "alt_art": false,
+      "set": "OP-11 A Fist of Divine Speed",
+      "costo": 2,
+      "poder": null,
+      "counter": 0,
+      "vida": null,
+      "atributo": "",
+      "subtipos": "Fish-Man Island",
+      "texto": "[Activate: Main] [Once Per Turn] If your Leader is [Shirahoshi], you may turn 1 card from the top of your Life cards face-up: Up to 1 of your \"Neptunian\", \"Fish-Man\", or \"Merfolk\" type Characters gains +1000 power during this turn.",
+      "cantidad": 1,
+      "estado": "LP",
+      "idioma": "Inglés",
+      "precio_mercado_usd": 0.06,
+      "dolar_clp": 979.01,
+      "precio_referencia": 60,
+      "precio_venta_clp": 110,
+      "precio_manual": false,
+      "notas": "",
+      "imagen": "img/OP11-117.webp",
+      "fecha_alta": "2026-10-11",
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
+    },
+    {
+      "id": 113,
+      "codigo": "OP04-027",
+      "nombre": "Daddy Masterson",
+      "color": [
+        "Verde"
+      ],
+      "tipo": "Character",
+      "rareza": "C",
+      "alt_art": false,
+      "set": "OP-04 Kingdoms of Intrigue",
+      "costo": 4,
+      "poder": 5000,
+      "counter": 0,
+      "vida": null,
+      "atributo": "Ranged",
+      "subtipos": "Former Navy East Blue",
+      "texto": "[DON!! x1] [End of Your Turn] Set this Character as active.",
+      "cantidad": 2,
+      "estado": "LP",
+      "idioma": "Inglés",
+      "precio_mercado_usd": 0.14,
+      "dolar_clp": 979.01,
+      "precio_referencia": 140,
+      "precio_venta_clp": 190,
+      "precio_manual": false,
+      "notas": "",
+      "imagen": "img/OP04-027.webp",
+      "fecha_alta": "2026-10-11",
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
+    },
+    {
+      "id": 114,
+      "codigo": "OP04-073",
+      "nombre": "Mr.13 & Ms.Friday",
+      "color": [
+        "Morado"
+      ],
+      "tipo": "Character",
+      "rareza": "C",
+      "alt_art": false,
+      "set": "OP-04 Kingdoms of Intrigue",
+      "costo": 3,
+      "poder": 1000,
+      "counter": 2000,
+      "vida": null,
+      "atributo": "Wisdom",
+      "subtipos": "Animal Baroque Works",
+      "texto": "[Activate:Main] You may trash this Character and 1 of your Characters with a type including \"Baroque Works\": Add up to 1 DON!! card from your DON!! deck and set it as active. [Trigger] Play this card.",
+      "cantidad": 1,
+      "estado": "LP",
+      "idioma": "Inglés",
+      "precio_mercado_usd": 0.08,
+      "dolar_clp": 979.01,
+      "precio_referencia": 80,
+      "precio_venta_clp": 130,
+      "precio_manual": false,
+      "notas": "",
+      "imagen": "img/OP04-073.webp",
+      "fecha_alta": "2026-10-11",
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
+    },
+    {
+      "id": 115,
+      "codigo": "OP04-046",
+      "nombre": "Queen",
+      "color": [
+        "Azul"
+      ],
+      "tipo": "Character",
+      "rareza": "UC",
+      "alt_art": false,
+      "set": "OP-04 Kingdoms of Intrigue",
+      "costo": 4,
+      "poder": 5000,
+      "counter": 1000,
+      "vida": null,
+      "atributo": "Strike",
+      "subtipos": "Animal Kingdom Pirates",
+      "texto": "[On Play] If your Leader has the [Animal Kingdom Pirates] type, look at 7 cards from the top of your deck; reveal a total of 2 [Plague Rounds] or [Ice Oni] cards and add them to your hand. Then, place the rest at the bottom of your deck in any order.",
+      "cantidad": 1,
+      "estado": "LP",
+      "idioma": "Inglés",
+      "precio_mercado_usd": 0.05,
+      "dolar_clp": 979.01,
+      "precio_referencia": 50,
+      "precio_venta_clp": 100,
+      "precio_manual": false,
+      "notas": "",
+      "imagen": "img/OP04-046.webp",
+      "fecha_alta": "2026-10-11",
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
+    },
+    {
+      "id": 116,
+      "codigo": "OP04-003",
+      "nombre": "Usopp",
+      "color": [
+        "Rojo"
+      ],
+      "tipo": "Character",
+      "rareza": "UC",
+      "alt_art": false,
+      "set": "OP-04 Kingdoms of Intrigue",
+      "costo": 4,
+      "poder": 5000,
+      "counter": 1000,
+      "vida": null,
+      "atributo": "Wisdom",
+      "subtipos": "Alabasta Straw Hat Crew",
+      "texto": "[On K.O.] K.O. up to 1 of your opponent's Characters with 5000 base power or less.",
+      "cantidad": 1,
+      "estado": "LP",
+      "idioma": "Inglés",
+      "precio_mercado_usd": 0.13,
+      "dolar_clp": 979.01,
+      "precio_referencia": 130,
+      "precio_venta_clp": 180,
+      "precio_manual": false,
+      "notas": "",
+      "imagen": "img/OP04-003.webp",
+      "fecha_alta": "2026-10-11",
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
+    },
+    {
+      "id": 117,
+      "codigo": "OP09-043",
+      "nombre": "Alvida",
+      "color": [
+        "Azul"
+      ],
+      "tipo": "Character",
+      "rareza": "UC",
+      "alt_art": false,
+      "set": "OP-09 Emperors in the New World",
+      "costo": 5,
+      "poder": 6000,
+      "counter": 1000,
+      "vida": null,
+      "atributo": "Strike",
+      "subtipos": "Cross Guild",
+      "texto": "[On K.O.] If your Leader has the \"Cross Guild\" type, play up to 1 Character card with a cost of 5 or less other than [Alvida] from your hand.",
+      "cantidad": 1,
+      "estado": "LP",
+      "idioma": "Inglés",
+      "precio_mercado_usd": 0.12,
+      "dolar_clp": 979.01,
+      "precio_referencia": 120,
+      "precio_venta_clp": 170,
+      "precio_manual": false,
+      "notas": "",
+      "imagen": "img/OP09-043.webp",
+      "fecha_alta": "2026-10-11",
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
+    },
+    {
+      "id": 118,
+      "codigo": "OP11-078",
+      "nombre": "Decuplets",
+      "color": [
+        "Morado"
+      ],
+      "tipo": "Character",
+      "rareza": "UC",
+      "alt_art": false,
+      "set": "OP-11 A Fist of Divine Speed",
+      "costo": 5,
+      "poder": 6000,
+      "counter": 2000,
+      "vida": null,
+      "atributo": "Wisdom",
+      "subtipos": "Big Mom Pirates",
+      "texto": "",
+      "cantidad": 1,
+      "estado": "LP",
+      "idioma": "Inglés",
+      "precio_mercado_usd": 0.07,
+      "dolar_clp": 979.01,
+      "precio_referencia": 70,
+      "precio_venta_clp": 120,
+      "precio_manual": false,
+      "notas": "",
+      "imagen": "img/OP11-078.webp",
+      "fecha_alta": "2026-10-11",
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
+    },
+    {
+      "id": 119,
+      "codigo": "OP04-110",
+      "nombre": "Pound",
+      "color": [
+        "Amarillo"
+      ],
+      "tipo": "Character",
+      "rareza": "C",
+      "alt_art": false,
+      "set": "OP-04 Kingdoms of Intrigue",
+      "costo": 3,
+      "poder": 3000,
+      "counter": 1000,
+      "vida": null,
+      "atributo": "Wisdom",
+      "subtipos": "Whole Cake Island",
+      "texto": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.) [On K.O.] Add up to 1 of your opponent's Characters with a cost of 3 or less to the top or bottom of your opponent's Life cards face-up.",
+      "cantidad": 1,
+      "estado": "LP",
+      "idioma": "Inglés",
+      "precio_mercado_usd": 0.05,
+      "dolar_clp": 979.01,
+      "precio_referencia": 50,
+      "precio_venta_clp": 100,
+      "precio_manual": false,
+      "notas": "",
+      "imagen": "img/OP04-110.webp",
+      "fecha_alta": "2026-10-11",
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
+    },
+    {
+      "id": 120,
+      "codigo": "OP11-002",
+      "nombre": "Ain",
+      "color": [
+        "Rojo"
+      ],
+      "tipo": "Character",
+      "rareza": "C",
+      "alt_art": false,
+      "set": "OP-11 A Fist of Divine Speed",
+      "costo": 3,
+      "poder": 4000,
+      "counter": 1000,
+      "vida": null,
+      "atributo": "Special",
+      "subtipos": "FILM Neo Navy",
+      "texto": "[On Play] Give up to 1 of your opponent's Characters 1000 power during this turn. Then, K.O. up to 1 of your opponent's Characters with 0 power or less.",
+      "cantidad": 1,
+      "estado": "LP",
+      "idioma": "Inglés",
+      "precio_mercado_usd": 0.06,
+      "dolar_clp": 979.01,
+      "precio_referencia": 60,
+      "precio_venta_clp": 110,
+      "precio_manual": false,
+      "notas": "",
+      "imagen": "img/OP11-002.webp",
+      "fecha_alta": "2026-10-11",
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
+    },
+    {
+      "id": 121,
+      "codigo": "OP11-110",
+      "nombre": "Fukaboshi",
+      "color": [
+        "Amarillo"
+      ],
+      "tipo": "Character",
+      "rareza": "C",
+      "alt_art": false,
+      "set": "OP-11 A Fist of Divine Speed",
+      "costo": 3,
+      "poder": 5000,
+      "counter": 0,
+      "vida": null,
+      "atributo": "Slash",
+      "subtipos": "Merfolk Fish-Man Island",
+      "texto": "If this Character would be K.O.'d, you may rest 1 of your [Fish-Man Island] or your [Shirahoshi] Leader instead.\n[On Play] You may add 1 card from the top or bottom of your Life cards to your hand: K.O. up to 1 of your opponent's Characters with a cost of 1 or less.",
+      "cantidad": 1,
+      "estado": "LP",
+      "idioma": "Inglés",
+      "precio_mercado_usd": 0.06,
+      "dolar_clp": 979.01,
+      "precio_referencia": 60,
+      "precio_venta_clp": 110,
+      "precio_manual": false,
+      "notas": "",
+      "imagen": "img/OP11-110.webp",
+      "fecha_alta": "2026-10-11",
+      "fuente_imagen": "foto de David (recorte con corrección de perspectiva y mejora)"
     }
   ]
 }

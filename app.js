@@ -18,6 +18,7 @@ const colorKey = c => { const cs = colores(c); return cs.length > 1 ? "Multicolo
 const accent = c => { const cs = colores(c); return cs.length > 1 ? `linear-gradient(90deg,${cs.map(x=>COLOR_VAR[x]||"#888").join(",")})` : (COLOR_VAR[cs[0]] || "#888"); };
 const accentSolid = c => COLOR_VAR[colores(c)[0]] || "#888";
 const qty = c => c.cantidad ?? 1;
+const pv = c => c.precio_venta_clp ?? c.precio_ref_clp ?? null;   // precio de venta mostrado (regla de David)
 const effect = t => esc(t).replace(/\[([^\]]+)\]/g, '<span class="kw">$1</span>');
 
 let cards = [], DATA = {}, list = [], cur = 0;
@@ -54,8 +55,8 @@ function filtered(){
   const S = {
     recientes:(a,b)=>(b.fecha_alta||"").localeCompare(a.fecha_alta||"")||(b.id||0)-(a.id||0),
     codigo:(a,b)=>(a.codigo||"").localeCompare(b.codigo||"","es",{numeric:true}),
-    precio_desc:(a,b)=>(b.precio_ref_clp??-1)-(a.precio_ref_clp??-1)||byName(a,b),
-    precio_asc:(a,b)=>(a.precio_ref_clp??1e12)-(b.precio_ref_clp??1e12)||byName(a,b),
+    precio_desc:(a,b)=>(pv(b)??-1)-(pv(a)??-1)||byName(a,b),
+    precio_asc:(a,b)=>(pv(a)??1e12)-(pv(b)??1e12)||byName(a,b),
     nombre:byName,
     costo:(a,b)=>(a.costo??-1)-(b.costo??-1)||byName(a,b),
     poder:(a,b)=>(b.poder??-1)-(a.poder??-1)||byName(a,b)};
@@ -65,7 +66,7 @@ function img(c, cls){ return c.imagen ? `<img src="${esc(c.imagen)}" alt="${esc(
 function tile(c, idx){
   const q = qty(c);
   return `<button class="tile" data-idx="${idx}" aria-label="${esc(c.nombre)}">${img(c)}
-    ${c.precio_ref_clp!=null?`<span class="ptag">${clp(c.precio_ref_clp)}</span>`:""}${q>1?`<span class="qbadge">x${q}</span>`:""}${c.alt_art?'<span class="altb">ALT</span>':""}</button>`;
+    ${pv(c)!=null?`<span class="ptag">${clp(pv(c))}</span>`:""}${q>1?`<span class="qbadge">x${q}</span>`:""}${c.alt_art?'<span class="altb">ALT</span>':""}</button>`;
 }
 function render(){
   list = filtered();
@@ -90,7 +91,7 @@ function detail(dx){
   det.innerHTML = `<div class="bigimg">${img(c)}</div>
   <div style="--acc:${accentSolid(c)}"><div class="dh"><h2>${c.costo!=null?`<span class="cost">${esc(c.costo)}</span> `:""}${esc(c.nombre)}</h2>
     <div class="cod">${esc(c.codigo)} · ${esc(c.set||"")}</div></div>
-    <div class="pricebox"><div><div class="big">${clp(c.precio_ref_clp)} <small>CLP ref.</small></div><div class="stock" style="margin-top:6px;font-size:13px">Cantidad: ${qty(c)}</div></div>
+    <div class="pricebox"><div><div class="big">${clp(pv(c))} <small>CLP</small></div>${c.precio_referencia!=null&&c.precio_referencia!==pv(c)?`<div style="font-size:12px;color:var(--mut,#9aa)">Ref. mercado ${clp(c.precio_referencia)}</div>`:""}<div class="stock" style="margin-top:6px;font-size:13px">Cantidad: ${qty(c)}</div></div>
       <div class="mk">Mercado TCGplayer<br><b style="color:var(--txt)">${usd(c.precio_mercado_usd)}</b></div></div>
     ${nums.length?`<div class="nums">${nums.map(([k,v])=>`<div class="num"><b>${esc(typeof v==="number"&&v>=1000?v.toLocaleString("es-CL"):v)}</b><span>${k}</span></div>`).join("")}</div>`:""}
     ${c.texto?`<div class="effect">${effect(c.texto)}</div>`:""}
@@ -145,7 +146,7 @@ fetch(SRC + "?t=" + Date.now()).then(r => { if(!r.ok) throw new Error(r.status);
     _search: norm([c.codigo,c.nombre,c.nombre_en,c.tipo,TYPE_ES[c.tipo],c.set,c.rareza,RAR_NAME[c.rareza],colores(c).join(" "),c.subtipos,c.atributo,c.texto,c.notas].join(" "))}));
   document.getElementById("demoBanner").hidden = !DEMO;
   const tq = cards.reduce((a,c)=>a+qty(c),0);
-  document.getElementById("tot").textContent = tq ? `${tq} cartas · ${clp(cards.reduce((a,c)=>a+(c.precio_ref_clp||0)*qty(c),0))}` : "";
+  document.getElementById("tot").textContent = tq ? `${tq} cartas · ${clp(cards.reduce((a,c)=>a+(pv(c)||0)*qty(c),0))}` : "";
   document.getElementById("foot").innerHTML = `Precios de referencia: ${esc(d.fuente_precios||"—")}${d.dolar_clp?` · Dólar $${esc(String(d.dolar_clp).replace(".",","))} CLP`:""}<br>Actualizado ${esc(d.actualizado||"—")} · El valor real depende del estado de cada carta.<br>One Piece Card Game © Eiichiro Oda / Shueisha, Toei Animation, Bandai. Sitio de colección personal, sin afiliación oficial.`;
   buildFilters(); render();
   const m = location.hash.match(/^#carta-(\d+)$/); if(m){ const i=list.findIndex(c=>String(c.id)===m[1]); if(i>=0) openAt(i); }

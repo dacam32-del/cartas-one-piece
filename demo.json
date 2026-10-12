@@ -28,10 +28,12 @@
       "estado": "NM",
       "idioma": "Inglés",
       "precio_mercado_usd": 1.72,
-      "precio_ref_clp": 1680,
       "notas": "EJEMPLO de demostración",
       "imagen": "img/demo/OP01-001.webp",
-      "fecha_alta": "2026-10-11"
+      "fecha_alta": "2026-10-11",
+      "precio_referencia": 1680,
+      "precio_venta_clp": 1680,
+      "precio_manual": false
     },
     {
       "id": 2,
@@ -55,10 +57,12 @@
       "estado": "LP",
       "idioma": "Inglés",
       "precio_mercado_usd": 30.81,
-      "precio_ref_clp": 30160,
       "notas": "EJEMPLO de demostración",
       "imagen": "img/demo/ST01-001.webp",
-      "fecha_alta": "2026-10-10"
+      "fecha_alta": "2026-10-10",
+      "precio_referencia": 30160,
+      "precio_venta_clp": 30160,
+      "precio_manual": false
     },
     {
       "id": 3,
@@ -82,10 +86,12 @@
       "estado": "NM",
       "idioma": "Inglés",
       "precio_mercado_usd": 5.08,
-      "precio_ref_clp": 4970,
       "notas": "EJEMPLO de demostración",
       "imagen": "img/demo/OP01-016.webp",
-      "fecha_alta": "2026-10-09"
+      "fecha_alta": "2026-10-09",
+      "precio_referencia": 4970,
+      "precio_venta_clp": 4970,
+      "precio_manual": false
     }
   ]
 }

@@ -38,11 +38,15 @@ Si la carta ya existe con el mismo código, variante, estado e idioma, solo se s
 Para una carta que no esté en la API: `--manual --nombre ... --color Rojo/Verde --tipo Character --rareza SR --set "OP-09 ..." --costo 4 --poder 6000 --counter 1000`.
 
 También se puede editar `cartas.json` a mano. Campos de cada carta:
-`id, codigo, nombre, color (lista), tipo (Leader/Character/Event/Stage/DON!!), rareza (C/UC/R/SR/SEC/L/SP/TR/P), alt_art (true/false), set, costo, poder, counter, vida, atributo, subtipos, texto, cantidad, estado (NM/LP/MP/HP/DMG), idioma, precio_mercado_usd, precio_ref_clp, dolar_clp, notas, imagen, fecha_alta`.
+`id, codigo, nombre, color (lista), tipo (Leader/Character/Event/Stage/DON!!), rareza (C/UC/R/SR/SEC/L/SP/TR/P), alt_art (true/false), set, costo, poder, counter, vida, atributo, subtipos, texto, cantidad, estado (NM/LP/MP/HP/DMG), idioma, precio_mercado_usd, dolar_clp, precio_referencia (crudo), precio_venta_clp (mostrado), precio_manual, notas, imagen, fuente_imagen, imagen_marca_agua, fecha_alta`.
 
 ## De dónde salen los datos, imágenes y precios
 - **Datos de la carta y precio de mercado:** [optcgapi.com](https://optcgapi.com) (API pública; precio de mercado TCGplayer en USD). Endpoints `/api/sets/card/<código>/` (OP, EB, PRB), `/api/decks/card/<código>/` (ST) y `/api/promos/card/<código>/` (P).
-- **Imágenes:** lista oficial de Bandai, `https://en.onepiece-cardgame.com/images/cardlist/card/<CÓDIGO>.png` (las Parallel/Alt Art usan el sufijo `_p1`, `_p2`…). El script la descarga, la reduce a 600 px y la guarda en `img/` como webp, para no depender del sitio externo. Si falla, usa la imagen de optcgapi.com. Nota: las imágenes oficiales vienen con la marca de agua "SAMPLE" (así las publica Bandai); si quieres fotos propias de tus cartas, guárdalas en `img/` y usa `--imagen img/archivo.jpg`.
-- **Precio de referencia CLP** = precio de mercado USD × dólar del día ([open.er-api.com](https://open.er-api.com), respaldo [mindicador.cl](https://mindicador.cl)), redondeado a $10. Se puede fijar a mano con `--precio`.
+- **Imágenes (sin "SAMPLE"):** las imágenes oficiales de Bandai traen la marca de agua "SAMPLE", así que **todas las imágenes del catálogo son recortes de las fotos de David**: `recortar_foto.py` baja la imagen oficial solo como referencia, encuentra la carta en la foto (SIFT + homografía, ignorando la franja del SAMPLE), la endereza a proporción 63×88 (630×880 px) y la mejora un poco (balance de blancos, denoise, contraste, nitidez). Se guarda en `img/<CÓDIGO>.webp`.
+  - Al agregar: `python3 agregar_carta.py OP11-041 --estado LP --foto lote.jpg` (o deja las fotos en una carpeta y exporta `CARTAS_FOTOS=/ruta/fotos`).
+  - Si no hay foto, se usa la imagen oficial como último recurso, queda marcada `imagen_marca_agua: true` y se puede arreglar después con `python3 agregar_carta.py --recortar-fotos fotos/*.jpg`.
+  - Fotos propias sueltas: `--imagen img/archivo.webp`.
+- **Precio de referencia CLP** = precio de mercado USD × dólar del día ([open.er-api.com](https://open.er-api.com), respaldo [mindicador.cl](https://mindicador.cl)), redondeado a $10 → `precio_referencia`.
+- **Precio de venta (el que se muestra y suma el total)** → `precio_venta_clp`: si la referencia es menor a $500 se le suman $50, y nunca baja de $100 (ej. 40→100, 70→120, 450→500, 1590→1590). Un `--precio` manual manda. `--aplicar-regla` la reaplica sin internet.
 
 One Piece Card Game © Eiichiro Oda / Shueisha, Toei Animation, Bandai. Sitio de colección personal, sin afiliación oficial.
