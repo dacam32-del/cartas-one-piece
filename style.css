@@ -137,3 +137,12 @@ footer{font-size:11px;padding:16px 16px 26px}
   .drawer{left:auto;top:0;bottom:0;width:380px;max-height:none;border-radius:0;border-top:none;border-left:1px solid var(--line);transform:translateX(105%)}
   .drawer.open{transform:none}
 }
+
+/* WhatsApp */
+.wahead{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;color:#25d366;background:rgba(37,211,102,.12);border:1px solid rgba(37,211,102,.35);flex:0 0 auto}
+.wahead:hover{background:rgba(37,211,102,.22)}
+.brand{display:flex;align-items:center;gap:8px}
+.wabuy{display:flex;align-items:center;justify-content:center;gap:8px;margin:12px 0 4px;padding:13px 16px;border-radius:12px;background:#25d366;color:#06281a;font-weight:800;font-size:16px;text-decoration:none;box-shadow:0 4px 14px rgba(37,211,102,.28)}
+.wabuy:hover{background:#2ee676}
+.wabuy svg{width:20px;height:20px}
+.brand .tot{margin-left:auto}
