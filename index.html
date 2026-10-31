@@ -71,5 +71,40 @@ a.addEventListener('play',ui);a.addEventListener('pause',ui);
 if(localStorage.getItem(K)!=='1'){a.play().then(ui).catch(function(){['click','touchstart','keydown'].forEach(function(t){document.addEventListener(t,first,true);});});}
 })();</script>
 <!-- /musica-vitrina -->
+<!-- calculadora-vitrina -->
+<style>#cv-btn{position:fixed;right:16px;bottom:88px;z-index:9998;width:52px;height:52px;border-radius:50%;border:2px solid #f4d03f;background:#8b1a1a;color:#f4d03f;font-size:24px;cursor:pointer;box-shadow:0 3px 10px rgba(0,0,0,.45)}
+#cv-btn b{position:absolute;top:-6px;right:-6px;background:#e11;color:#fff;font:700 12px/20px sans-serif;min-width:20px;height:20px;border-radius:10px;padding:0 4px}
+#cv-btn.cv-f{animation:cvf .4s}@keyframes cvf{50%{transform:scale(1.25)}}
+#cv-pan{position:fixed;right:16px;bottom:150px;z-index:10000;width:min(360px,calc(100vw - 32px));max-height:65vh;overflow:auto;background:#8b1a1a;color:#f4d03f;border:2px solid #f4d03f;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.55);font:14px/1.35 system-ui,sans-serif;display:none;padding:10px}
+#cv-pan.cv-o{display:block}#cv-pan .cv-h{font-weight:700;font-size:16px;display:flex;justify-content:space-between;margin-bottom:6px}
+#cv-pan [data-a]{cursor:pointer;user-select:none}#cv-pan .cv-r{border-top:1px solid rgba(128,128,128,.35);padding:6px 0}
+#cv-pan .cv-n{font-weight:600;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+#cv-pan .cv-c{display:flex;align-items:center;gap:6px;margin-top:3px;flex-wrap:wrap}#cv-pan .cv-c span[data-a]{display:inline-block;min-width:22px;text-align:center;border:1px solid #f4d03f;border-radius:6px}
+#cv-pan input{width:90px;background:transparent;color:inherit;border:1px solid rgba(128,128,128,.6);border-radius:6px;padding:2px 4px}#cv-pan small{opacity:.7}
+#cv-pan .cv-s{text-align:right;font-weight:600}#cv-pan .cv-t{display:flex;justify-content:space-between;border-top:2px solid #f4d03f;margin-top:6px;padding-top:6px;font-size:16px}
+#cv-pan .cv-v{margin-top:8px;text-align:center;border:1px solid #f4d03f;border-radius:8px;padding:4px}#cv-pan .cv-e,#cv-pan .cv-note{opacity:.75;font-size:12px;margin-top:6px}
+.cv-add{position:absolute;right:6px;bottom:6px;z-index:5;background:#8b1a1a;color:#f4d03f;border:1px solid #f4d03f;border-radius:14px;padding:3px 9px;font:600 12px/1.3 system-ui,sans-serif;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.35)}.cv-add:hover{filter:brightness(1.2)}</style>
+<script>(function(){var C={"card": "button.tile", "name": "@aria-label", "price": ".ptag", "key": "onepiece"},K='calc_vitrina_'+C.key,S=[];try{S=JSON.parse(localStorage.getItem(K))||[]}catch(e){}
+function save(){localStorage.setItem(K,JSON.stringify(S))}
+function fmt(n){return '$'+Math.round(n).toLocaleString('es-CL')}
+function parse(t){t=t||'';var i=t.lastIndexOf('Chile');if(i>=0)t=t.slice(i);var m=t.match(/\d[\d.]*(?:,\d+)?/g)||[];var v=m.map(function(x){return parseInt(x.replace(/,\d+$/,'').replace(/\./g,''),10)}).filter(function(x){return !isNaN(x)}).slice(0,2);
+ if(!v.length)return{p:0,r:false};if(v.length==2&&v[1]>v[0])return{p:Math.round((v[0]+v[1])/2),r:true};return{p:v[0],r:false}}
+function nm(c){if(C.name[0]=='@')return c.getAttribute(C.name.slice(1))||'';var e=c.querySelector(C.name);return e?e.textContent.trim():''}
+function deco(){document.querySelectorAll(C.card).forEach(function(c){if(c.querySelector('.cv-add'))return;if(getComputedStyle(c).position=='static')c.style.position='relative';var b=document.createElement('span');b.className='cv-add';b.setAttribute('role','button');b.tabIndex=0;b.textContent='➕ Agregar';c.appendChild(b)})}
+function add(c){var n=nm(c),pe=c.querySelector(C.price),pr=parse(pe?pe.textContent:'');var id=c.getAttribute('data-id')||n;var it=S.find(function(x){return x.id==id});if(it)it.q++;else S.push({id:id,n:n,p:pr.p,r:pr.r,q:1});save();draw();flash()}
+var btn=document.createElement('button'),pan=document.createElement('div');btn.id='cv-btn';btn.title='Calculadora';pan.id='cv-pan';
+function flash(){btn.classList.remove('cv-f');void btn.offsetWidth;btn.classList.add('cv-f')}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function draw(){var q=0,t=0;S.forEach(function(x){q+=x.q;t+=x.q*x.p});btn.innerHTML='🧮'+(q?'<b>'+q+'</b>':'');
+ pan.innerHTML='<div class="cv-h">🧮 Mi cuenta<span class="cv-x" data-a="close">✕</span></div>'+(S.length?'<div class="cv-l">'+S.map(function(x,i){return '<div class="cv-r"><div class="cv-n">'+esc(x.n)+'</div><div class="cv-c">$<input type="number" min="0" step="100" value="'+x.p+'" data-i="'+i+'" class="cv-p">'+(x.r?'<small title="Punto medio del rango de precio">≈ medio</small>':'')+' <span data-a="m" data-i="'+i+'">−</span><b>'+x.q+'</b><span data-a="p" data-i="'+i+'">+</span><span data-a="d" data-i="'+i+'" title="Quitar">🗑</span></div><div class="cv-s">'+fmt(x.p*x.q)+'</div></div>'}).join('')+'</div>':'<div class="cv-e">Toca “➕ Agregar” en una ficha para sumarla.</div>')+
+ '<div class="cv-t"><span>'+q+' ítem'+(q==1?'':'s')+'</span><b>'+fmt(t)+' CLP</b></div>'+(S.length?'<div class="cv-v" data-a="clr">Vaciar</div>':'')+'<div class="cv-note">Precios de referencia; “≈ medio” = punto medio del rango.</div>'}
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('.cv-add');if(a){e.preventDefault();e.stopPropagation();add(a.closest(C.card))}},true);
+document.addEventListener('keydown',function(e){var a=e.target.closest&&e.target.closest('.cv-add');if(a&&(e.key=='Enter'||e.key==' ')){e.preventDefault();e.stopPropagation();add(a.closest(C.card))}},true);
+pan.addEventListener('click',function(e){var a=e.target.getAttribute('data-a'),i=+e.target.getAttribute('data-i');if(!a)return;if(a=='close')pan.classList.remove('cv-o');if(a=='p')S[i].q++;if(a=='m'){S[i].q--;if(S[i].q<1)S.splice(i,1)}if(a=='d')S.splice(i,1);if(a=='clr'&&confirm('¿Vaciar la cuenta?'))S=[];save();draw()});
+pan.addEventListener('change',function(e){if(e.target.classList.contains('cv-p')){S[+e.target.dataset.i].p=Math.max(0,+e.target.value||0);S[+e.target.dataset.i].r=false;save();draw()}});
+btn.addEventListener('click',function(){pan.classList.toggle('cv-o')});
+function init(){document.body.appendChild(btn);document.body.appendChild(pan);draw();deco();new MutationObserver(function(){clearTimeout(init.t);init.t=setTimeout(deco,60)}).observe(document.body,{childList:true,subtree:true})}
+if(document.body)init();else document.addEventListener('DOMContentLoaded',init)})();</script>
+<!-- /calculadora-vitrina -->
 </body>
 </html>
