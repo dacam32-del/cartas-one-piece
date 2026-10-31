@@ -58,5 +58,18 @@
   <div class="nav"><button id="prev">‹ Anterior</button><span class="hint">desliza ⇆</span><button id="next">Siguiente ›</button></div>
 </div>
 <script src="app.js?v=20261025b"></script>
+<!-- musica-vitrina --><div id="musica-credito" style="text-align:center;font-size:11px;opacity:.6;padding:8px 8px 70px">Música: "Captain Scurvy" de Kevin MacLeod (<a href="https://incompetech.com" style="color:inherit">incompetech.com</a>), licencia <a href="https://creativecommons.org/licenses/by/4.0/" style="color:inherit">CC BY 4.0</a></div>
+<audio id="bgm" src="audio/musica.mp3" loop preload="auto"></audio>
+<button id="bgm-btn" aria-label="Música" title="Música" style="position:fixed;left:16px;bottom:16px;z-index:9999;width:44px;height:44px;border-radius:50%;border:2px solid #f4d03f;background:#8b1a1a;color:#f4d03f;font-size:20px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.4);opacity:.9">🔇</button>
+<script>(function(){var a=document.getElementById('bgm'),b=document.getElementById('bgm-btn'),K='vitrina_musica_pausada';a.volume=0.35;
+function ui(){b.textContent=a.paused?'🔇':'🔊';}
+function go(){return a.play().then(ui).catch(function(){ui();});}
+function first(e){if(e&&e.target===b)return;rm();if(localStorage.getItem(K)!=='1'&&a.paused)go();}
+function rm(){['click','touchstart','keydown'].forEach(function(t){document.removeEventListener(t,first,true);});}
+b.addEventListener('click',function(){rm();if(a.paused){localStorage.removeItem(K);go();}else{a.pause();localStorage.setItem(K,'1');ui();}});
+a.addEventListener('play',ui);a.addEventListener('pause',ui);
+if(localStorage.getItem(K)!=='1'){a.play().then(ui).catch(function(){['click','touchstart','keydown'].forEach(function(t){document.addEventListener(t,first,true);});});}
+})();</script>
+<!-- /musica-vitrina -->
 </body>
 </html>
