@@ -5,6 +5,9 @@ Catálogo de mis cartas del **One Piece Card Game (OPTCG)**: código, nombre, co
 **Ver la página:** https://dacam32-del.github.io/cartas-one-piece/
 **Vista de ejemplo (demo, cartas que NO son de la colección):** https://dacam32-del.github.io/cartas-one-piece/?demo=1
 
+## 🛒 Tienda web
+**[https://dacam32-del.github.io/cartas-one-piece/](https://dacam32-del.github.io/cartas-one-piece/)**
+
 ## Qué tiene la página
 - Diseño "cartas primero": grilla de imágenes grandes (2 columnas en celular, más en escritorio) con solo una etiqueta de precio y la cantidad (xN) cuando hay más de una.
 - Encabezado compacto (título + total de cartas y valor). Los filtros y el orden están en un panel **Filtros** que se abre al tocar el botón (cerrado por defecto).
